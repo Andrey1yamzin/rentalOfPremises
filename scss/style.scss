@@ -34,4 +34,27 @@
     height: 100vh;
     // background: linear-gradient( rgba(27, 27, 27, 0.5), rgba(27, 27, 27, 0.5)) ,url(../image/backg.png)50% 50% /cover no-repeat;
     background: linear-gradient(to bottom, #0f4989, #1e5696, #2b62a3, #3770b0, #437dbd);
+    display: flex;
+    align-items: center;
 }
+
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 0 0 200px;
+    .content-abovetitle{
+        
+        display: flex;
+        flex-direction: column;
+
+        span{
+            display: block;
+            margin: 10px 0 0 0;
+            color: #fff;
+        }
+    }
+}
+
+
+// сделать фиксированный блок для контента что бы не растягивалось на других расширения
