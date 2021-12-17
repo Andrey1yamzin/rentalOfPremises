@@ -46,25 +46,26 @@
 .section{
     width: 100%;
 }
+
 .content-wrapper{
     max-width: 1920px;
     margin: 0 auto;
     .content{
         display: flex;
-        flex-direction: column;
-        padding: 50px 0 0 150px;
+        flex-direction: row;
+        padding: 50px 0 0 50px;
         width: 100%;
-        
-        span{
+        .content_text{
             display: block;
             width: 100%;
             margin: 10px 0 0 0;
             color: #fff;
             font-family: 'Roboto', sans-serif;
-            font-size: 15px;
+            font-weight: 300;
+            font-size: 12px;
             position: relative;
 }}}
-.content span::before{
+.content_text::before{
     content:"";
     background: url(../icons/iconcheck.png) 50% 50%/cover no-repeat;
     width: 15px;
@@ -73,11 +74,26 @@
     left: -20px;
     top: 2px;
 }
+.content-text_wrapper{
+    width: 700px;
+    margin: 0px auto 0 auto;
+    
+}
+.content-text_title{
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            margin-top: 50px;
+            font-weight: 500;
+            width: 690px;
+            margin: 50px auto 0 auto;
+}
+
 .content-form{
-    width: 80%;
+    width: 100%;
     height: auto;
     // background: rgba(10, 7, 51, 0.116);
-    border-radius: 10px;
+    padding: 0px 20px 0 10px;
     display: flex;
     flex-direction: column;
 }
@@ -86,7 +102,6 @@
     display: flex;
     width: 100%;
     height: auto;
-    margin-top: 50px;
     button{
         width: 100px;
         height: 50px;
@@ -106,6 +121,7 @@
         color: #000;
         font-weight: 500;
         font-size: 15px;
+        
     }
     
 }
@@ -116,4 +132,47 @@
     background: #fff;
     border-radius: 10px;
 }
+
+//делаем кастомный чекбокс нужно переместить в отдельный файл scss
+.content-form_real-checkbox{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+.content-form_custom-checkbox{
+    display: inline-block;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 2px solid black;
+    vertical-align: sub;
+    border-radius: 4px;
+    margin-right: 5px;
+    position: relative;
+    margin-left: 5px;
+    
+}
+.content-form_custom-checkbox::before{
+    content: '';
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    background: url(../icons/iconcheck_form.png) 50% 50%/contain no-repeat;
+    position: absolute;
+    left: 50%;
+    top :50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.2s ease-in;
+}
+
+//делаем показ чекбокса
+.content-form_real-checkbox:checked + .content-form_custom-checkbox::before{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
 // сделать фиксированный блок для контента что бы не растягивалось на других расширения
