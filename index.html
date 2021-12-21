@@ -10,10 +10,11 @@
     <title>Помощь в аренде</title>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper-body">
         <header class = "header">
-            <div class="header-wrapper">
-                <div class="header-content_wrapper">
+             <div class="header-wrapper">
+             <div class="header-content">
+                 <!-- добить БЭМ -->
                     <div class="header-logo_wrapper">
                         <div class="header-logo"></div>
                     </div>
@@ -46,7 +47,25 @@
                                <br> <label><input type="radio" name="category" value="item" class="content-form_real-radioBtn"><span class="content-form_custom-radioBtn"></span> пункт 1</label>
                                     <label><input type="radio" name="category" value="item" class="content-form_real-radioBtn"><span class="content-form_custom-radioBtn"></span> пункт 2</label> -->
                                     <div class="content-form_dropdown-wrapper">
-                                        <button class="content-form_dropdown-items">пункт 1</button>
+                                        <button class="content-form_dropdown-button">...</button>
+                                        <ul  class="content-form_dropdown-list">
+                                            <li class="content-form_dropdown-list_item">пункт 1</li>
+                                            <li class="content-form_dropdown-list_item">пункт 2</li>
+                                            <li class="content-form_dropdown-list_item">пункт 3</li>
+                                        </ul>
+                                        <input type="text" name="select" value="" class="content-form_dropdown-list_input">
+                                    </div>
+
+
+
+                                    <div class="content-form_dropdown-wrapper">
+                                        <button class="content-form_dropdown-button">...</button>
+                                        <ul  class="content-form_dropdown-list">
+                                            <li class="content-form_dropdown-list_item">пункт 1</li>
+                                            <li class="content-form_dropdown-list_item">пункт 2</li>
+                                            <li class="content-form_dropdown-list_item">пункт 3</li>
+                                        </ul>
+                                        <input type="text" name="select" value="" class="content-form_dropdown-list_input">
                                     </div>
                             </form>
                             
@@ -55,10 +74,12 @@
         </div>
             </div>
         </section>
+
+        <!-- надо перебрать классы правильно написать их -->
         <!-- <footer></footer> -->
 
 
     </div>
-    
+    <script src="js/main.js"></script>
 </body>
 </html>
