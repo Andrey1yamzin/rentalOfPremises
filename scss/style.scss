@@ -56,7 +56,7 @@
         flex-direction: row;
         padding: 30px 0 0 50px;
         width: 100%;
-        .content_text{
+        .content-text{
             display: block;
             width: 100%;
             margin: 10px 0 0 0;
@@ -66,7 +66,7 @@
             font-size: 12px;
             position: relative;
 }}}
-.content_text::before{
+.content-text::before{
     content:"";
     background: url(../icons/iconcheck.png) 50% 50%/cover no-repeat;
     width: 15px;
