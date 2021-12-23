@@ -106,9 +106,11 @@
     border-radius: 5px;
     cursor: pointer;
     padding: 8px 30px 13px 10px;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
-    color: rgb(73, 73, 73);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #000;
     overflow: hidden;
 }
 .content-form_dropdown-button::after{
@@ -144,6 +146,8 @@
     border: 1px solid #7e9bbd;
     border-bottom: 0;
     transition: 0.3s all;  
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
 .content-form_dropdown-list_item:first-child{
     border-radius: 6px 6px 0 0;
