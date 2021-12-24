@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="style/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;700&display=swap" rel="stylesheet">
     <title>Помощь в аренде</title>
 </head>
 <body>
     <div class="wrapper-body">
+       <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
+       <!----------------------------------------------------------------------шапка сайта----------------------------------------------------------------------->
         <header class = "header">
              <div class="header-wrapper">
              <div class="header-content">
@@ -24,59 +26,106 @@
                 </div>        
         </div>  
         </header>
+
+
+        <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
+       <!----------------------------------------------------------------------контент сайта---------------------------------------------------------------------->
         <section class="section">
             <div class="content-wrapper">
                 <div class="content">
                     <div class="content-text_wrapper"> 
 
-                        <div class="content-text--title">
-                            Оставьте заявку с указанием ваших пожеланий и мы проанализируем предложения муниципальной и коммерческой собственности и направим вам самые оптимальные варианты по аренде или покупке недвижимости в течение 24 часов
-                        </div>
+                        
 
                         <span class="content-text">Открываете свой бизнес и ищете подходящую недвижимость на выгодных условиях?</span>
                         <span class="content-text">Хотите найти помещение по более низкой арендной ставке, которая не будет меняться на протяжении всего срока договора?</span>
                         <span class="content-text">Задумались о покупке помещения в собственность и ищете надежного продавца?</span>
+
+                        <div class="content-text--title">
+                            Оставьте заявку с указанием ваших пожеланий и мы направим вам самые оптимальные варианты в течение <span>24 часов</span>
                         </div>
-                       
+                        </div>
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------->
+                               <!-- разметка формы-->
                     <div class="content-form">
+                        <!-- кнопки для выбора таба формы-->
                         <div class="conten-form_buttons">
                             <button class="municipal">Муниципальное</button>
                             <button class="purchase">Государственное</button>
                             <button class="purchase">Частное</button>
                         </div>
-                        <div class="content-form_tabs">
-                            <form action="">
+                        <!--табы-->
+                        <div class="content-form_wrapper">
+                            <form action="" class="content_form--body">
+
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------->
+                               
+                                <div class="content-form--level">
+                                    
+                                     <!--выбор аренда или покупка начало-->
+                                    <div class="content-form_dropdown-wrapper">
+                                    <button class="content-form_dropdown-button">Тип обращения</button>
+                                    <ul  class="content-form_dropdown-list">
+                                        <li class="content-form_dropdown-list_item">Арендовать</li>
+                                        <li class="content-form_dropdown-list_item">Купить</li>
+                                    </ul>
+                                    <input type="text" name="select" value="" class="content-form_dropdown-list_input">
+                                </div>
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------->
+                                <!--выбоо типа помещения-->
+                                <div class="content-form_dropdown-wrapper">
+                                        <button class="content-form_dropdown-button">Тип помещения</button>
+                                        <ul  class="content-form_dropdown-list">
+                                            <li class="content-form_dropdown-list_item">Торговое</li>
+                                            <li class="content-form_dropdown-list_item">Офисное</li>
+                                            <li class="content-form_dropdown-list_item">Складское</li>
+
+                                            <li class="content-form_dropdown-list_item">Производственное</li>
+                                            <li class="content-form_dropdown-list_item">Земельный участок</li>
+                                            <li class="content-form_dropdown-list_item">Другое</li>
+                                            <!--сделать инпут если выбирается другое что бы пользователь сам смог ввести тип-->
+                                        </ul>
+                                        <!----------------------------------------------------------------->
+                                        <input type="text" name="select" value="" class="content-form_dropdown-list_input">
+                                        <!--сделан для того что бы с дропдауна запонить и отправить выбор-->
+                                    </div>
+                               
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------->
+                          <!--радиокнопка для выбора физ.лицо или юр.лицо-->
+                          <div class="content-form_radiobtn-wrapper">
+                            <label><input type="radio" name="category" value="item" class="content-form_real-radioBtn"><span class="content-form_custom-radioBtn"></span>Физическое лицо</label>
+                            <label><input type="radio" name="category" value="item" class="content-form_real-radioBtn"><span class="content-form_custom-radioBtn"></span>Юридическое лицо/ИП</label>
+</div>
+                       </div>
+                                
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------->
+<div class="content-form--level">
+   <input type="checkbox" id="check1" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span><label for="check1">5-15 кв.м.</label> 
+   <input type="checkbox" id="check2" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span><label for="check2">15-30 кв.м.</label>
+   <!-- <input type="checkbox" id="check3" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span><label for="check3">30-50 кв.м.</label> 
+   <input type="checkbox" id="check4" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span><label for="check4">50-70 кв.м.</label>
+   <input type="checkbox" id="check5" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span><label for="check5">70-100 кв.м.</label> 
+   <input type="checkbox" id="check6" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span><label for="check6">100-250 кв.м.</label>
+   <input type="checkbox" id="check7" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span><label for="check7">свыше 250 кв.м.</label>         -->
+</div>
+<!--разобраться с чекбоксами!!!!!-->
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
 
 
                                 
-                                <input type="checkbox" id="check1" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span><label for="check1">пункт 1</label>
-                                <input type="checkbox" id="check2" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span><label for="check2">пункт 2</label>
-                               <br> <label><input type="radio" name="category" value="item" class="content-form_real-radioBtn"><span class="content-form_custom-radioBtn"></span> пункт 1</label>
-                                    <label><input type="radio" name="category" value="item" class="content-form_real-radioBtn"><span class="content-form_custom-radioBtn"></span> пункт 2</label>
 
 
 
 
-                                    <div class="content-form_dropdown-wrapper">
-                                        <button class="content-form_dropdown-button">...</button>
-                                        <ul  class="content-form_dropdown-list">
-                                            <li class="content-form_dropdown-list_item">Арендовать</li>
-                                            <li class="content-form_dropdown-list_item">Купить</li>
-                                        </ul>
-                                        <input type="text" name="select" value="" class="content-form_dropdown-list_input">
-                                    </div>
 
-
-
-                                    <div class="content-form_dropdown-wrapper">
-                                        <button class="content-form_dropdown-button">...</button>
-                                        <ul  class="content-form_dropdown-list">
-                                            <li class="content-form_dropdown-list_item">пункт 1</li>
-                                            <li class="content-form_dropdown-list_item">пункт 2</li>
-                                            <li class="content-form_dropdown-list_item">пункт 3</li>
-                                        </ul>
-                                        <input type="text" name="select" value="" class="content-form_dropdown-list_input">
-                                    </div>
                             </form>
                             
                         </div>
@@ -86,7 +135,7 @@
         </section>
 
         <!-- <footer></footer> -->
-
+        
 
     </div>
     <script src="js/main.js"></script>
