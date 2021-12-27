@@ -65,7 +65,7 @@
     height: auto;
     padding: 0 0 0 5px;
     button{
-        width: 150px;
+        width: 250px;
         height: 50px;
         margin-left: 2px;
         border-radius: 10px 10px 0px 0px;
@@ -126,11 +126,12 @@
 }
 
 
-.content-form__tabs{
+.content-form__tabs--hide{
     display: none;
 }
 .content-form__tabs--visible{
     display: block;
+    
 }
 .content-form__preview{
 width: 100%;
@@ -147,7 +148,7 @@ position: relative;
 img{
     width: 50px;
     height: 50px;
-    transform: rotate(270deg) ;
+    transform: rotate(270deg);
     position: absolute;
     top: 20px;
     left: 130px;
@@ -163,3 +164,29 @@ img{
     50%  {top:20px;}
     100% {top:10px;}
   }
+
+  .content-form_inpetdata-wrapper{
+    padding: 15px 0;
+    input{
+        width: 310px;
+        height: 40px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 1em;
+        margin: 10px 25px;
+        background: #fff;
+        border: 1px solid #7e9bbd;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 5px 10px 0px 10px;
+        font-size: 16px;
+    }
+    .content-form--submit{
+        width: 150px;
+        height: 50px;
+        background: rgba(15, 30, 80, 0.986);
+        color: #fff;
+        padding: 10px 0;
+    }
+  }
+  
