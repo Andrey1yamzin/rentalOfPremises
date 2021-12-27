@@ -104,7 +104,6 @@
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        padding-left: 30px;
         label:last-child{
             padding-left: 30px;
         }
@@ -114,4 +113,53 @@
 .content-form--level{
     display: flex;
     padding: 15px 0px;
+    flex-wrap: wrap;
 }
+
+.content-form--title{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    padding: 0px 20px;
+    margin-top: 20px;
+    margin-bottom:-15px ;
+}
+
+
+.content-form__tabs{
+    display: none;
+}
+.content-form__tabs--visible{
+    display: block;
+}
+.content-form__preview{
+width: 100%;
+height: 300px;
+display: flex;
+justify-content: center;
+align-items: center;
+text-transform: uppercase;
+color: rgb(218, 218, 218);
+font-family: 'Roboto', sans-serif;
+font-weight: 500;
+font-size: 3em;
+position: relative;
+img{
+    width: 50px;
+    height: 50px;
+    transform: rotate(270deg) ;
+    position: absolute;
+    top: 20px;
+    left: 130px;
+    opacity: 0.3;
+    animation-name: arrowup;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+}
+
+@keyframes arrowup {
+    0%   {top:10px}
+    50%  {top:20px;}
+    100% {top:10px;}
+  }
