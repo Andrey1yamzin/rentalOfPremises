@@ -1,5 +1,4 @@
-window.addEventListener('DOMContentLoaded', function(){
-    let dropdonWrap = document.querySelectorAll('.content-form_dropdown-wrapper');
+let dropdonWrap = document.querySelectorAll('.content-form_dropdown-wrapper');
 
     let wrapBtn = document.querySelector('.conten-form_buttons');
     let btn = document.querySelectorAll('.btn');
@@ -56,5 +55,3 @@ window.addEventListener('DOMContentLoaded', function(){
                 }
             }
         })
-
-})
