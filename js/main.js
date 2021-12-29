@@ -1,8 +1,36 @@
+let wrapBtn = document.querySelector('.conten-form_buttons');
+let btn = document.querySelectorAll('.btn');
+let tabs = document.querySelectorAll('.content-form__tabs');
 let dropdonWrap = document.querySelectorAll('.content-form_dropdown-wrapper');
 
-    let wrapBtn = document.querySelector('.conten-form_buttons');
-    let btn = document.querySelectorAll('.btn');
-    let tabs = document.querySelectorAll('.content-form__tabs');
+  
+
+
+
+
+    function hideTabContent(hide){
+        for(let i = hide; i < tabs.length; i++){
+            tabs[i].classList.remove('content-form__tabs--visible');
+            tabs[i].classList.add('content-form__tabs--hide');
+        }}
+        hideTabContent(1);
+    function showTabContent(show){
+        if(tabs[show].classList.contains('content-form__tabs--hide')){
+            tabs[show].classList.remove('content-form__tabs--hide');
+            tabs[show].classList.add('content-form__tabs--visible');
+        }}
+    wrapBtn.addEventListener('click', function(event){
+            let target = event.target;
+            if(target && target.classList.contains('btn')){
+                for(let i = 0; i < btn.length; i++){
+                    if(target == btn[i]){
+                        hideTabContent(0);
+                        showTabContent(i+1);
+                        break; 
+                    }
+                }
+            }
+        })
 
     dropdonWrap.forEach((dropWrapp)=>{
         let dropdown = dropWrapp.querySelector('.content-form_dropdown-button');
@@ -32,26 +60,4 @@ let dropdonWrap = document.querySelectorAll('.content-form_dropdown-wrapper');
         })
     }) 
  
-    function hideTabContent(hide){
-        for(let i = hide; i < tabs.length; i++){
-            tabs[i].classList.remove('content-form__tabs--visible');
-            tabs[i].classList.add('content-form__tabs--hide');
-        }}
-        hideTabContent(1);
-    function showTabContent(show){
-        if(tabs[show].classList.contains('content-form__tabs--hide')){
-            tabs[show].classList.remove('content-form__tabs--hide');
-            tabs[show].classList.add('content-form__tabs--visible');
-        }}
-    wrapBtn.addEventListener('click', function(event){
-            let target = event.target;
-            if(target && target.classList.contains('btn')){
-                for(let i = 0; i < btn.length; i++){
-                    if(target == btn[i]){
-                        hideTabContent(0);
-                        showTabContent(i+1);
-                        break; 
-                    }
-                }
-            }
-        })
+    
