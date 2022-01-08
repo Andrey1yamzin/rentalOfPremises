@@ -14,13 +14,12 @@
         width: 100%;
         .content-text{
             display: block;
-            width: 100%;
             margin: 5px 0 0 50px ;
             color: #fff;
             font-family: 'Roboto', sans-serif;
             text-transform: uppercase;
             font-weight: 300;
-            font-size: 0.7em;
+            font-size: calc(7px + 2 * (100vw / 1280));
             position: relative;
 }}}
 .content-text::before{
@@ -33,16 +32,15 @@
     top: 2px;
 }
 .content-text_wrapper{
-    // width: 700px;
     margin: 0px auto 0 auto;
-    font-size: 16px;
     
 }
 .content-text--title{
             color: #fff;
             width: 80%;
             font-family: 'Rubik', sans-serif;
-            font-size: 2em;
+            // font-size: 32px;
+            font-size: calc(20px + 10 * (100vw / 1280));
             font-weight: 500;
             text-transform: uppercase;
             margin: 30px 0 10px 0;
@@ -58,7 +56,7 @@
     padding: 80px 30px 0 30px;
     display: flex;
     flex-direction: column;
-    input{
+    .input{
         width: 310px;
         height: 40px;
         font-family: 'Roboto', sans-serif;
@@ -123,7 +121,7 @@
     min-height: auto;
     background: #fff;
     border-radius: 5px;
-    min-width: 400px;
+    // min-width: 310px;
 }
 
 .content_form--body{
@@ -173,7 +171,7 @@ text-transform: uppercase;
 color: rgb(218, 218, 218);
 font-family: 'Roboto', sans-serif;
 font-weight: 500;
-font-size: 3em;
+font-size: calc(15px + 18 * (100vw / 1280));
 position: relative;
 img{
     width: 50px;
@@ -197,8 +195,9 @@ img{
 
   .content-form_inpetdata-wrapper{
     padding: 15px 0;
-    input{
+    .input{
         margin: 10px 25px;
+        padding: 5px 10px 0px 10px;
     }
     .content-form--submit{
         width: 150px;
@@ -206,6 +205,7 @@ img{
         background: rgba(15, 30, 80, 0.986);
         color: #fff;
         padding: 10px 0;
+        margin: 10px 25px;
     }
   }
   

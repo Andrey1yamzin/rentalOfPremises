@@ -1,0 +1,142 @@
+@media (max-width: 1240px){
+    .content_form--body {
+        .content-form_radiobtn-wrapper{
+            margin: 30px 0px 30px 20px;
+        }
+    }
+    .content-form_inpetdata-wrapper .input{
+        margin: 10px 10px;
+    }
+    .content-form--title{
+        margin-top: 30px;
+    }
+
+    .content-form--level{
+        margin-top: 15px;
+        width: 100%;
+    }
+    .content-form_inpetdata-wrapper {
+        .content-form--submit{
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 992px){
+    
+    .content-text--title{
+        width: 100%;
+    }
+    .header-content{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header-text_wrapper {
+        padding: 30px 0 0 0;
+        span{
+        width: 100%;
+        text-align: center;
+        }
+    }
+    .content-wrapper  {
+        .content{
+            .content-text{
+                margin: 5px 0 0 10px;
+            }
+        }
+       
+    }
+    .content-text_wrapper{
+        padding-left: 20px;
+    }
+    .content-form_inpetdata-wrapper{
+        padding: 15px 20px 0 0;
+    }
+    .content-form .input{
+        width: 100%;
+    }
+}
+@media (max-width: 767px){
+    .content-wrapper {
+        .content{
+            padding: 15px 0px;
+        }
+    }
+    
+    
+
+}
+
+@media (max-width: 480px){
+    .content-wrapper  {
+        .content{
+            .content-text{
+                display: inline-block;
+                padding: 0px 10px 0 0;
+            }
+        }
+    }
+    .content_form--body {
+        .content-form_radiobtn-wrapper{
+            width: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .content-form_radiobtn-wrapper label:last-child{
+            padding: 10px 0px;
+        }
+    }
+    .content-text--title{
+        margin: 30px 0px;
+    }
+    .content-form{
+        padding: 0px 2px;
+    }
+
+    .conten-form_buttons{
+        padding: 0 0 0 0;
+    }
+    .content-text::before{
+        width: 10px;
+        height: 10px;
+        left: -15px;
+    }
+    .content-form__preview{
+        height: 100px;
+        padding: 30px 0 0 0;
+        img{
+            width: 25px;
+            height: 25px;
+            top: 10px;
+            left: 45%;
+            
+        }
+    }
+
+    .content-form_dropdown-wrapper{
+        margin: 15px 10px;
+        width: 100%;
+    }
+
+    .content-form_inpetdata-wrapper {
+        .input{
+            margin: 10px 10px
+        }
+    }
+
+    .content-form_dropdown-button{
+        width: 100%;
+    }
+    .content-form_dropdown-list{
+        width: 100%;
+    }
+}
+
+// адаптивный шрифт
+// 40px, 24px это условные шрифты
+// font-size: calc(24px + 16 * (100vw / 1280))
+// 24px это оптимальный шрифт намобильных утройствах 
+// 16px это 40px - 24px 40px это набоьших экранах
+// при разрешении ниже 767px нужно отнять 320px от 100vw и добавить 70% от 16
+// font-size: calc(24px + (16 + 16 * 0.7) * ((100vw - 320px) / 1280))
