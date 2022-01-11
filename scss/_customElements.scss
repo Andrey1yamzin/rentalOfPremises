@@ -197,3 +197,16 @@
 .content-form_dropdown-list_input--visible{
     display: block;
 }
+
+
+.input._error{
+        box-shadow: 0 0 5px red;
+    }
+.content-form_dropdown-wrapper._error{
+        box-shadow: 0 0 5px red;
+    }
+
+.content-form__agreement-checkbox._error.content-form_custom-checkbox{
+    box-shadow: 0 0 5px red;
+    border: 2px solid rgb(156, 16, 16);
+}

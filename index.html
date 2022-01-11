@@ -96,7 +96,7 @@
                                                                                         <!--ТАБ 1 АРЕНДА-->
                             <div class="content-form__tabs content-form__tabs--hide">
 
-                                <form action="" class="content_form--body" id="formww">
+                                <form action="#" class="content_form--body" id="formrent">
 
                             <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
                                                                    
@@ -104,14 +104,14 @@
                                                                         
                                                                                         <!--ВЫБОР ТИПА СОБСТВЕННОСТИ-->
                                                 <div class="content-form_dropdown-wrapper">
-                                                <button class="content-form_dropdown-button">Тип собственности</button>
+                                                <button class="content-form_dropdown-button ">Тип собственности</button>
                                                 <ul  class="content-form_dropdown-list">
                                                     <li class="content-form_dropdown-list_item">Государственная</li>
                                                     <li class="content-form_dropdown-list_item">Муниципальная</li>
                                                     <li class="content-form_dropdown-list_item">Частная</li>
                                                 </ul>
                                                                                         <!--вписывается выбор и отправляется с формой-->
-                                                 <input type="text" name="select" value="" class="content-form_dropdown-list_input">
+                                                 <input type="text" name="select" value="" class="content-form_dropdown-list_input _req">
                                                                                         <!--------------------------------------------->
                                             </div>
                             <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
@@ -133,7 +133,7 @@
 
 
                                                                     <!--вписывается выбор и отправляется с формой-->
-                                                    <input type="text" name="select" value=""  id="input" class="input content-form_dropdown-list_input ">
+                                                    <input type="text" name="select" value=""  id="input" class="input content-form_dropdown-list_input _req">
                                                                                             <!--------------------------------------------->
                                                 </div>
                                                 <!--инпут для ввода данных когда будут выбирать другое-->
@@ -143,15 +143,15 @@
                                                                    
                             <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
                                                                                                 <!--РАДИО КНОПКИ ВЫБОРА ЛИЦА-->
-                                <div class="content-form_radiobtn-wrapper">
+                                <div class="content-form_radiobtn-wrapper ">
                                         <label><input type="radio" name="category" value="item" class="content-form_real-radioBtn"><span class="content-form_custom-radioBtn"></span>Физическое лицо</label>
                                         <label><input type="radio" name="category" value="item" class="content-form_real-radioBtn"><span class="content-form_custom-radioBtn"></span>Юридическое лицо/ИП</label>
                                     </div>
                                                         </div>
                             <!--------------------------------------------------------------------------------------------------------------------------------------------------------> 
                                                                                                         <!--ВЫБОР РАЙОНА-->
-                                <div class="content-form--title">Выберите район</div>
-                                    <div class="content-form--level">
+                                <div class="content-form--title ">Выберите район</div>
+                                    <div class="content-form--level ">
                                         <label for="zavodsky-rent" class="content-form_checkbtn"><input type="checkbox" id="zavodsky-rent" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>Заводский</label>
                                        <label for="kirovsky-rent" class="content-form_checkbtn"><input type="checkbox" id="kirovsky-rent" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>Кировский</label>
                                        <label for="leninist-rent" class="content-form_checkbtn"><input type="checkbox" id="leninist-rent" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>Ленинский</label>
@@ -192,7 +192,7 @@
                                                                     <!-------------------------------------------------------------------------------->
                                         </ul>
                                                                                         <!--вписывается выбор и отправляется с формой-->
-                                        <input type="text" name="select" value="" id="input" class="input content-form_dropdown-list_input">
+                                        <input type="text" name="select" value="" id="input" class="input content-form_dropdown-list_input _req">
                                     </div>
 
                             <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
@@ -209,7 +209,7 @@
 
 
                                                                                         <!--вписывается выбор и отправляется с формой-->
-                                        <input type="text" name="select" value="" id="input" class="input content-form_dropdown-list_input">
+                                        <input type="text" name="select" value="" id="input" class="input content-form_dropdown-list_input _req">
                                     
                                     </div>
                                     </div>
@@ -217,10 +217,18 @@
                                                                                         <!--ВВОД ЛИЧНЫХ ДАННЫХ-->   
                                     <div class="content-form--level">
                                         <div class="content-form_inpetdata-wrapper"> 
-                                            <input type="text" name="" value="ФИО" id="input" class=" input content-form_inpetname">
-                                            <input type="phone" name="" value="Телефон" id="input" class="input content-form_phone">
-                                            <input type="email" name="" value="Email" id="input" class="input content-form_email">
-                                            <input type="submit" value="отправить"class=" content-form--submit">
+                                            <input type="text" name="" value="ФИО" id="input" class="input content-form_inpetname _req">
+                                            <input type="phone" name="" value="Телефон" id="input" class="input content-form_phone _req">
+                                            <input type="email" name="" value="Email" id="input" class="input content-form_email _req _email">
+                                            <div class="content-form__agreement">
+                                                <div class="content-form__agreement-checkbox">
+                                                    <label for="formAgreement" class="content-form_checkbtn"><input type="checkbox" checked id="formAgreement" name="agreement" class="content-form_real-checkbox _req"><span class="content-form_custom-checkbox"></span>Я даю свое согласие на обработку моих персональных данных в соотвествии с <a href="#">Условиями</a>*</label>
+                                                </div>
+                                            </div>
+                                            <input type="submit" value="отправить" class="content-form--submit">
+                                            <div class="content-form--text">
+                                                
+                                            </div>
                                         </div>
                                        
 
@@ -356,6 +364,11 @@
                                                                                                         <input type="text" name="" value="ФИО" id="input" class="input content-form_inpetname">
                                                                                                         <input type="phone" name="" value="Телефон" id="input" class="input content-form_phone">
                                                                                                         <input type="email" name="" value="Email" id="input" class="input content-form_email">
+                                                                                                        <div class="content-form__agreement">
+                                                                                                            <div class="content-form__agreement-checkbox">
+                                                                                                                <label for="formAgreement" class="content-form_checkbtn"><input type="checkbox" checked id="formAgreement" name="agreement" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>Я даю свое согласие на обработку моих персональных данных в соотвествии с <a href="#">Условиями</a>*</label>
+                                                                                                            </div>
+                                                                                                        </div>
                                                                                                         <input type="submit" value="отправить" class="content-form--submit">
                                                                                                     </div>
                                                                                                    
@@ -380,6 +393,6 @@
 
     </div>
     <script src="js/buttons.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js"></script>  
 </body>
 </html>
