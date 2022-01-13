@@ -1,3 +1,12 @@
+
+
+.content-form_checkbtn._error{
+.content-form_custom-checkbox{
+    box-shadow: 0 0 5px red;
+    border: 2px solid rgb(156, 16, 16); 
+}
+
+}
 //кастомные чекбоксы
 
 .content-form_checkbtn{
@@ -46,6 +55,7 @@
 //фокус на чекбоксе
 .content-form_real-checkbox:checked + .content-form_custom-checkbox{
     box-shadow: 0px 0px 0px 1px #38557a, 0px 0px 10px #7e9bbd;
+    border: 2px solid rgb(24, 69, 182);
 }
 .content-form_real-checkbox:hover + .content-form_custom-checkbox{
     box-shadow: 0px 0px 0px 1px #38557a, 0px 0px 10px #7e9bbd;
@@ -118,7 +128,7 @@
     padding: 5px 10px 0px 10px;
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
-    font-weight: 500;
+    font-weight: 300;
     color: #000;
     overflow: hidden;
     line-height: 30px;
@@ -140,7 +150,7 @@
 .content-form_dropdown-list{
     position: absolute;
     left: 0;
-    top: 42px;
+    top: 74px;
     background: #fff;
     box-shadow: 0px 5px 9px rgba(176, 198, 225, 0.6);
     border-radius: 6px;
@@ -200,13 +210,20 @@
 
 
 .input._error{
-        box-shadow: 0 0 5px red;
-    }
-.content-form_dropdown-wrapper._error{
-        box-shadow: 0 0 5px red;
-    }
-
-.content-form__agreement-checkbox._error.content-form_custom-checkbox{
     box-shadow: 0 0 5px red;
-    border: 2px solid rgb(156, 16, 16);
+    border: 1px solid rgb(156, 16, 16); 
+}
+
+
+.content-form_checkbtn._error{
+.content-form_custom-checkbox{
+    box-shadow: 0 0 5px red;
+    border: 2px solid rgb(156, 16, 16); 
+}
+
+}
+
+.content-form_real-checkbox:checked + .content-form_custom-checkbox{
+    box-shadow: 0px 0px 0px 1px #38557a, 0px 0px 10px #7e9bbd;
+    border: 2px solid rgb(24, 69, 182);
 }

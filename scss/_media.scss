@@ -20,6 +20,19 @@
             display: block;
         }
     }
+    .content-form_radiobtn-wrapper{
+        position: relative;
+        top:30px;
+    }
+    .content-form_radiobtn-wrapper::before{
+        content: 'Юридический статус';
+        position: absolute;
+        top: -40px;
+        left: 0px;
+        font-family: Roboto,sans-serif;
+        font-weight: 500;
+        font-size: 1em;
+    }
 }
 
 @media (max-width: 992px){
@@ -54,6 +67,18 @@
         padding: 15px 20px 0 0;
     }
     .content-form .input{
+        width: 100%;
+    }
+
+    .content-form_dropdown-wrapper{
+        width: 100%;
+    }
+
+    .content-form_dropdown-button{
+        width: 100%;
+    }
+
+    .content-form_dropdown-list{
         width: 100%;
     }
 }

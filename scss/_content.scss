@@ -60,14 +60,14 @@
         width: 310px;
         height: 40px;
         font-family: 'Roboto', sans-serif;
-        font-weight: 500;
+        font-weight: 300;
         font-size: 1em;
         margin: 0px 0px;
         background: #fff;
         border: 1px solid #7e9bbd;
         border-radius: 5px;
         cursor: pointer;
-        padding: 5px 10px 0px 10px;
+        padding: 0px 10px 0px 10px;
         font-size: 16px;
     }
 }
@@ -121,7 +121,7 @@
     min-height: auto;
     background: #fff;
     border-radius: 5px;
-    // min-width: 310px;
+    padding-top: 30px;
 }
 
 .content_form--body{
@@ -148,10 +148,36 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 1em;
-    padding: 0px 20px;
+    padding: 0px 25px;
     margin-top: 20px;
     margin-bottom:-15px ;
+    
 }
+
+
+.content-form_dropdown--title{
+    margin-bottom: 10px;
+    font-family: Roboto,sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+}
+.content-form_radiobtn-wrapper{
+    position: relative;
+    top:15px;
+    font-family: Roboto,sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+}
+.content-form_radiobtn-wrapper::before{
+    content: 'Юридический статус';
+    position: absolute;
+    top: -10px;
+    left:5px;
+    font-family: Roboto,sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+}
+
 
 
 .content-form__tabs--hide{
@@ -251,3 +277,6 @@ img{
       font-weight: 500;
       color: rgb(212, 110, 110);
   }
+
+
+

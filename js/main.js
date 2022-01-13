@@ -122,6 +122,7 @@ formRent.addEventListener('submit', formSend);
             if (error === 0){
                 formReqText.textContent = '';
             }else{
+                // document.querySelector('.content-form_dropdown--title').style.color = 'red';
                 formReqText.textContent = 'Заполните все поля!';
             }
         }
