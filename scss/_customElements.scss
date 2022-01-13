@@ -1,12 +1,4 @@
 
-
-.content-form_checkbtn._error{
-.content-form_custom-checkbox{
-    box-shadow: 0 0 5px red;
-    border: 2px solid rgb(156, 16, 16); 
-}
-
-}
 //кастомные чекбоксы
 
 .content-form_checkbtn{
@@ -111,7 +103,7 @@
 //дкастомный дропдаун
 .content-form_dropdown-wrapper{
     width: auto;
-    margin: 5px 25px;
+    margin: 5px 20px;
     position: relative;
     // margin-bottom: 50px;
 }
@@ -209,16 +201,29 @@
 }
 
 
-.input._error{
-    box-shadow: 0 0 5px red;
-    border: 1px solid rgb(156, 16, 16); 
+// .input._error{
+//     box-shadow: 0 0 5px red;
+//     border: 1px solid rgb(156, 16, 16); 
+// }
+.content-form_dropdown-wrapper._error{
+    position: relative;
 }
-
+.content-form_dropdown-wrapper._error::before{
+    content: '*';
+    display: block;
+    position: absolute;
+    color: rgb(156, 16, 16);
+    top: -5px;
+    left: -10px;
+    width: 150px;
+    height: 10px;
+}
 
 .content-form_checkbtn._error{
 .content-form_custom-checkbox{
     box-shadow: 0 0 5px red;
-    border: 2px solid rgb(156, 16, 16); 
+    border: 2px solid rgb(156, 16, 16);
+
 }
 
 }

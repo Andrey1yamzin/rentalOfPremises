@@ -1,4 +1,8 @@
 @media (max-width: 1240px){
+
+    .content-form_wrapper--input{
+        width: 100%;
+    }
     .content_form--body {
         .content-form_radiobtn-wrapper{
             margin: 30px 0px 30px 20px;
@@ -6,15 +10,15 @@
     }
     .content-form_inpetdata-wrapper .input{
         margin: 10px 10px;
+        width: 100%;
     }
     .content-form--title{
         margin-top: 30px;
     }
 
-    .content-form--level{
-        margin-top: 15px;
-        width: 100%;
-    }
+    // .content-form--level{
+        
+    // }
     .content-form_inpetdata-wrapper {
         .content-form--submit{
             display: block;
@@ -33,6 +37,13 @@
         font-weight: 500;
         font-size: 1em;
     }
+    .name{
+        display: block;
+        margin-top: 15px;
+        width: 100%;
+        padding: 0 30px 0 10px;
+    }
+    
 }
 
 @media (max-width: 992px){
@@ -80,6 +91,11 @@
 
     .content-form_dropdown-list{
         width: 100%;
+    }
+
+
+    .name{
+        padding: 0 10px 0 10px;
     }
 }
 @media (max-width: 767px){
@@ -155,6 +171,16 @@
     }
     .content-form_dropdown-list{
         width: 100%;
+    }
+    .content-form_dropdown--title{
+        padding-left: 15px;
+    }
+    .content-form_dropdown-wrapper._error::before{
+        left: 4px;
+        text-transform: uppercase;
+    }
+    .name{
+        padding: 0 0px 0 0px;
     }
 }
 

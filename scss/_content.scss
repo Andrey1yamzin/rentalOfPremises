@@ -121,7 +121,6 @@
     min-height: auto;
     background: #fff;
     border-radius: 5px;
-    padding-top: 30px;
 }
 
 .content_form--body{
@@ -133,14 +132,14 @@
         align-items: center;
         justify-content: space-evenly;
         label:last-child{
-            padding-left: 30px;
+            padding-left: 20px;
         }
     }
 }
 
 .content-form--level{
     display: flex;
-    padding: 15px 0px;
+    padding: 15px 0px 15px 0;
     flex-wrap: wrap;
 }
 
@@ -225,25 +224,26 @@ img{
         margin: 10px 25px;
         padding: 5px 10px 0px 10px;
     }
-    .content-form--submit{
-        width: 150px;
-        height: 50px;
-        background: rgba(20, 40, 105, 0.986);
-        color: #fff;
-        padding: 10px 0;
-        margin: 10px 25px;
-        border: none;
-        font-family: 'Roboto', sans-serif;
-        text-transform: uppercase;
-        border-radius: 25px;
-        transition: .2s ease 0s;
-    }
-    .content-form--submit:hover{
-        background: rgba(17, 35, 92, 0.986);
-        cursor: pointer;
-        
-    }
+    
   }
+  .content-form--submit{
+    width: 150px;
+    height: 50px;
+    background: rgba(20, 40, 105, 0.986);
+    color: #fff;
+    padding: 10px 0;
+    margin: 10px 25px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    border-radius: 25px;
+    transition: .2s ease 0s;
+}
+.content-form--submit:hover{
+    background: rgba(17, 35, 92, 0.986);
+    cursor: pointer;
+    
+}
   .content-form__agreement{
       width: 100%;
       padding: 20px 5px;
@@ -278,5 +278,74 @@ img{
       color: rgb(212, 110, 110);
   }
 
+  .content-form--text_two{
+    width: 100%;
+    padding: 10px 30px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: rgb(212, 110, 110);
+}
+
+  .content-form_inpetdata-wrapper{
+      display: flex;
+      flex-wrap: wrap;
+  }
 
 
+.content-form_wrapper--input{
+    display: flex;
+    flex-direction: column;
+    
+    span{
+        font-family: Roboto,sans-serif;
+        font-weight: 500;
+        font-size: 1em;
+        padding-left: 25px;
+    }
+}
+
+.content-form_wrapper--input._error{
+    position: relative;
+    span::before{
+        content: '*';
+        position: absolute;
+        color: rgb(156, 16, 16);
+        top: -5px;
+        left: 15px;
+    }
+    
+    }
+
+
+    .content_form--body{
+        position: relative;
+    }
+
+    .content_form--body::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(51, 51, 51, 0.9) url("../image/Spinner.gif") center/ 50px no-repeat;
+        opacity: 0;
+        transition: all 0.5s ease 0s;
+        // z-index: -1;
+        visibility: hidden;
+    }
+
+
+    .content_form--body._tabs--visible::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(51, 51, 51, 0.9) url("../image/Spinner.gif") center/ 50px no-repeat;
+        opacity: 1;
+        visibility: visible;
+        // z-index: 1;
+    }

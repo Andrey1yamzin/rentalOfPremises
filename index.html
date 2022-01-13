@@ -104,7 +104,7 @@
                                                                         
                                                                                         <!--ВЫБОР ТИПА СОБСТВЕННОСТИ-->
                                                 <div class="content-form_dropdown-wrapper">
-                                                    <div class="content-form_dropdown--title">Тип собственности</div>
+                                                    <div class="content-form_dropdown--title ">Тип собственности</div>
                                                 <button class="content-form_dropdown-button ">...</button>
                                                 <ul  class="content-form_dropdown-list">
                                                     <li class="content-form_dropdown-list_item">Государственная</li>
@@ -112,7 +112,7 @@
                                                     <li class="content-form_dropdown-list_item">Частная</li>
                                                 </ul>
                                                                                         <!--вписывается выбор и отправляется с формой-->
-                                                 <input type="text" name="select" value="" class="content-form_dropdown-list_input _req">
+                                                 <input type="text" name="propertyType" value="" class="content-form_dropdown-list_input _req">
                                                                                         <!--------------------------------------------->
                                             </div>
                             <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
@@ -135,7 +135,7 @@
 
 
                                                                     <!--вписывается выбор и отправляется с формой-->
-                                                    <input type="text" name="select" value=""  id="input" class="input content-form_dropdown-list_input _req">
+                                                    <input type="text" name="RoomType" value=""  id="input" class="input content-form_dropdown-list_input _req">
                                                                                             <!--------------------------------------------->
                                                 </div>
                                                 <!--инпут для ввода данных когда будут выбирать другое-->
@@ -146,31 +146,31 @@
                             <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
                                                                                                 <!--РАДИО КНОПКИ ВЫБОРА ЛИЦА-->
                                 <div class="content-form_radiobtn-wrapper ">
-                                        <label><input type="radio" name="category" value="item" class="content-form_real-radioBtn"><span class="content-form_custom-radioBtn"></span>Физическое лицо</label>
-                                        <label><input type="radio" name="category" value="item" class="content-form_real-radioBtn"><span class="content-form_custom-radioBtn"></span>Юридическое лицо/ИП</label>
+                                        <label><input type="radio" name="status" checked value="physical" class="content-form_real-radioBtn"><span class="content-form_custom-radioBtn"></span>Физическое лицо</label>
+                                        <label><input type="radio" name="status" value="legal" class="content-form_real-radioBtn"><span class="content-form_custom-radioBtn"></span>Юридическое лицо/ИП</label>
                                     </div>
                                                         </div>
                             <!--------------------------------------------------------------------------------------------------------------------------------------------------------> 
                                                                                                         <!--ВЫБОР РАЙОНА-->
                                 <div class="content-form--title ">Выберите район</div>
                                     <div class="content-form--level ">
-                                        <label for="zavodsky-rent" class="content-form_checkbtn"><input type="checkbox" id="zavodsky-rent" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>Заводский</label>
-                                       <label for="kirovsky-rent" class="content-form_checkbtn"><input type="checkbox" id="kirovsky-rent" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>Кировский</label>
-                                       <label for="leninist-rent" class="content-form_checkbtn"><input type="checkbox" id="leninist-rent" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>Ленинский</label>
-                                       <label for="miner-rent" class="content-form_checkbtn"><input type="checkbox" id="miner-rent" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>Рудничный</label>
-                                       <label for="central-rent" class="content-form_checkbtn"><input type="checkbox" id="central-rent" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>Центральный</label>
+                                        <label for="zavodsky-rent" class="content-form_checkbtn"><input type="checkbox" name="district" value="zavodsky" id="zavodsky-rent" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>Заводский</label>
+                                       <label for="kirovsky-rent" class="content-form_checkbtn"><input type="checkbox" name="district" value="kirovsky" id="kirovsky-rent" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>Кировский</label>
+                                       <label for="leninist-rent" class="content-form_checkbtn"><input type="checkbox"  name="district" value="leninist" id="leninist-rent" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>Ленинский</label>
+                                       <label for="miner-rent" class="content-form_checkbtn"><input type="checkbox"    name="district" value="miner" id="miner-rent" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>Рудничный</label>
+                                       <label for="central-rent" class="content-form_checkbtn"><input type="checkbox" name="district" value="central" id="central-rent" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>Центральный</label>
                                     </div>
                             <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
                                                                                                     <!--ВЫБОР ПЛОЩАДИ ПОМЕЩЕНИЯ-->
                                 <div class="content-form--title">Площадь объекта</div>
                                     <div class="content-form--level">
-                                        <label for="check1" class="content-form_checkbtn"><input type="checkbox" id="check1" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>5-15 кв.м.</label>
-                                       <label for="check2" class="content-form_checkbtn"><input type="checkbox" id="check2" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>15-30 кв.м.</label>
-                                       <label for="check3" class="content-form_checkbtn"><input type="checkbox" id="check3" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>30-50 кв.м.</label>
-                                       <label for="check4" class="content-form_checkbtn"><input type="checkbox" id="check4" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>50-70 кв.м.</label>
-                                       <label for="check5" class="content-form_checkbtn"><input type="checkbox" id="check5" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>70-100 кв.м.</label>
-                                       <label for="check6" class="content-form_checkbtn"><input type="checkbox" id="check6" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>100-250 кв.м.</label>
-                                       <label for="check7" class="content-form_checkbtn"><input type="checkbox" id="check7" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>свыше 250 кв.м.</label>
+                                        <label for="check1" class="content-form_checkbtn"><input type="checkbox" name="square" value="one" id="check1" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>5-15 кв.м.</label>
+                                       <label for="check2" class="content-form_checkbtn"><input type="checkbox" name="square" value="two" id="check2" class="content-form_real-checkbox "><span class="content-form_custom-checkbox"></span>15-30 кв.м.</label>
+                                       <label for="check3" class="content-form_checkbtn"><input type="checkbox" name="square" value="three" id="check3" class="content-form_real-checkbox "><span class="content-form_custom-checkbox"></span>30-50 кв.м.</label>
+                                       <label for="check4" class="content-form_checkbtn"><input type="checkbox" name="square" value="four" id="check4" class="content-form_real-checkbox "><span class="content-form_custom-checkbox"></span>50-70 кв.м.</label>
+                                       <label for="check5" class="content-form_checkbtn"><input type="checkbox" name="square" value="five" id="check5" class="content-form_real-checkbox "><span class="content-form_custom-checkbox"></span>70-100 кв.м.</label>
+                                       <label for="check6" class="content-form_checkbtn"><input type="checkbox" name="square" value="six" id="check6" class="content-form_real-checkbox "><span class="content-form_custom-checkbox"></span>100-250 кв.м.</label>
+                                       <label for="check7" class="content-form_checkbtn"><input type="checkbox" name="square" value="seven" id="check7" class="content-form_real-checkbox "><span class="content-form_custom-checkbox"></span>свыше 250 кв.м.</label>
                                     </div>
                                     
                             <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
@@ -219,22 +219,22 @@
                                     </div>
                             <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
                                                                                         <!--ВВОД ЛИЧНЫХ ДАННЫХ-->   
-                                    <div class="content-form--level">
+                                    <div class="content-form--level name">
                                         <div class="content-form_inpetdata-wrapper">
-                                            <input type="text" name="" value="ФИО" id="input" class="input content-form_inpetname _req">
-                                            <input type="phone" name="" value="Телефон" id="input" class="input content-form_phone _req">
-                                            <input type="email" name="" value="Email" id="input" class="input content-form_email _req _email">
-                                            <div class="content-form__agreement">
-                                                <div class="content-form__agreement-checkbox">
-                                                    <label for="formAgreement" class="content-form_checkbtn"><input type="checkbox" checked id="formAgreement" name="agreement" class="content-form_real-checkbox _req"><span class="content-form_custom-checkbox"></span>Я даю свое согласие на обработку моих персональных данных в соотвествии с <a href="#">Условиями</a>*</label>
-                                                </div>
-                                            </div>
-                                            <input type="submit" value="отправить" class="content-form--submit">
-                                            <div class="content-form--text">
-                                                
+                                           <div class="content-form_wrapper--input"><span>ФИО:</span><input type="text" name="" value="" id="input" class="input content-form_inpetname _req"></div>
+                                           <div class="content-form_wrapper--input"><span>Номер телефона:</span><input type="phone" name="" value="" id="input" class="input content-form_phone _req"></div>
+                                            <div class="content-form_wrapper--input"><span>Email:</span><input type="email" name="" value="" id="input" class="input content-form_email _req _email"></div>
+                                            
+                                        </div>
+                                        <div class="content-form__agreement">
+                                            <div class="content-form__agreement-checkbox">
+                                                <label for="formAgreement" class="content-form_checkbtn"><input type="checkbox" checked id="formAgreement" name="agreement" class="content-form_real-checkbox _req"><span class="content-form_custom-checkbox"></span>Я даю свое согласие на обработку моих персональных данных в соотвествии с <a href="#">Условиями</a>*</label>
                                             </div>
                                         </div>
-                                       
+                                        <input type="submit" value="отправить" class="content-form--submit">
+                                        <div class="content-form--text">
+                                            
+                                        </div>
 
                                     </div>
                             <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
@@ -242,145 +242,166 @@
                             </div>
                             <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
                                                                                         <!--ТАБ 2 ПОКУПКА-->
+
                             <div class="content-form__tabs content-form__tabs--hide">
 
-                                 <form action="" class="content_form--body">
-                                                            
-                                                                                        <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
-                                                                                                                               
-                                                                                                            <div class="content-form--level">
-                                                                                                                                    
-                                                                                                                                                    <!--ВЫБОР ТИПА СОБСТВЕННОСТИ-->
-                                                                                                            <div class="content-form_dropdown-wrapper">
-                                                                                                            <button class="content-form_dropdown-button">Тип собственности</button>
-                                                                                                            <ul  class="content-form_dropdown-list">
-                                                                                                                <li class="content-form_dropdown-list_item">Государственная</li>
-                                                                                                                <li class="content-form_dropdown-list_item">Муниципальная</li>
-                                                                                                                <li class="content-form_dropdown-list_item">Частная</li>
-                                                                                                            </ul>
-                                                                                                                                                    <!--вписывается выбор и отправляется с формой-->
-                                                                                                             <input type="text" name="select" value="" class="content-form_dropdown-list_input">
-                                                                                                                                                    <!--------------------------------------------->
-                                                                                                        </div>
-                                                                                        <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
-                                                                                                                                                                <!--ВЫБОР ТИПА ПОМЕЩЕНИЯ -->
-                                                                                                        <div class="content-form_dropdown-wrapper">
-                                                                                                                <button class="content-form_dropdown-button">Тип помещения</button>
-                                                                                                                 <ul  class="content-form_dropdown-list">
-                                                                                                                    <li class="content-form_dropdown-list_item">Торговое</li>
-                                                                                                                     <li class="content-form_dropdown-list_item">Офисное</li>
-                                                                                                                    <li class="content-form_dropdown-list_item">Складское</li>
-                                                                                                
-                                                                                                                    <li class="content-form_dropdown-list_item">Производственное</li>
-                                                                                                                    <li class="content-form_dropdown-list_item">Земельный участок</li>
-                                                                                                                    <li class="content-form_dropdown-list_item">Другое</li>
-                                                                                                                </ul>
-                                                                                                                            <!-------------------------------------------------------------------------------->
-                                                                                                                            <!--сделать инпут если выбирается другое что бы пользователь сам смог ввести тип-->
-                                                                                                                            <!-------------------------------------------------------------------------------->
-                                                            
-                                                            
-                                                                                                                                <!--вписывается выбор и отправляется с формой-->
-                                                                                                                <input type="text" name="select" value="" id="input" class="input content-form_dropdown-list_input">
-                                                                                                                                                        <!--------------------------------------------->
-                                                                                                            </div>
-                                                                                                            <!--инпут для ввода данных когда будут выбирать другое-->
-                                                                                                
-                                                                                                            <!-- <input type="text"> -->
-                                                                                                            <!--НЕЗАБУДЬ!!!!-->
-                                                                                                                               
-                                                                                        <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
-                                                                                                                                                            <!--РАДИО КНОПКИ ВЫБОРА ЛИЦА-->
-                                                                                            <div class="content-form_radiobtn-wrapper">
-                                                                                                    <label><input type="radio" name="category" value="item" class="content-form_real-radioBtn"><span class="content-form_custom-radioBtn"></span>Физическое лицо</label>
-                                                                                                    <label><input type="radio" name="category" value="item" class="content-form_real-radioBtn"><span class="content-form_custom-radioBtn"></span>Юридическое лицо/ИП</label>
-                                                                                                </div>
-                                                                                                                    </div>
-                                                                                        <!--------------------------------------------------------------------------------------------------------------------------------------------------------> 
-                                                                                                                                                                    <!--ВЫБОР РАЙОНА-->
-                                                                                            <div class="content-form--title">Выберите район</div>
-                                                                                                <div class="content-form--level">
-                                                                                                    <label for="zavodsky-purchase" class="content-form_checkbtn"><input type="checkbox" id="zavodsky-purchase" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>Заводский</label>
-                                                                                                   <label for="kirovsky-purchase" class="content-form_checkbtn"><input type="checkbox" id="kirovsky-purchase" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>Кировский</label>
-                                                                                                   <label for="leninist-purchase" class="content-form_checkbtn"><input type="checkbox" id="leninist-purchase" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>Ленинский</label>
-                                                                                                   <label for="miner-purchase" class="content-form_checkbtn"><input type="checkbox" id="miner-purchase" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>Рудничный</label>
-                                                                                                   <label for="central-purchase" class="content-form_checkbtn"><input type="checkbox" id="central-purchase" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>Центральный</label>
-                                                                                                </div>
-                                                                                        <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
-                                                                                                                                                                <!--ВЫБОР ПЛОЩАДИ ПОМЕЩЕНИЯ-->
-                                                                                            <div class="content-form--title">Площадь объекта</div>
-                                                                                                <div class="content-form--level">
-                                                                                                    <label for="check8" class="content-form_checkbtn"><input type="checkbox" id="check8" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>5-15 кв.м.</label>
-                                                                                                   <label for="check9" class="content-form_checkbtn"><input type="checkbox" id="check9" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>15-30 кв.м.</label>
-                                                                                                   <label for="check10" class="content-form_checkbtn"><input type="checkbox" id="check10" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>30-50 кв.м.</label>
-                                                                                                   <label for="check11" class="content-form_checkbtn"><input type="checkbox" id="check11" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>50-70 кв.м.</label>
-                                                                                                   <label for="check12" class="content-form_checkbtn"><input type="checkbox" id="check12" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>70-100 кв.м.</label>
-                                                                                                   <label for="check13" class="content-form_checkbtn"><input type="checkbox" id="check13" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>100-250 кв.м.</label>
-                                                                                                   <label for="check14" class="content-form_checkbtn"><input type="checkbox" id="check14" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>свыше 250 кв.м.</label>
-                                                                                                </div>
-                                                                                                
-                                                                                        <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
-                                                                                                                                                            <!--ВЫБОР НАПРАВЛЕНИЯ БИЗНЕСА-->
-                                                                                            <div class="content-form--level">
-                                                                                                 <div class="content-form_dropdown-wrapper">
-                                                                                                    <button class="content-form_dropdown-button">Направление бизнеса</button>
-                                                                                                    <ul  class="content-form_dropdown-list">
-                                                                                                        <li class="content-form_dropdown-list_item">Стационарный торговый объект</li>
-                                                                                                        <li class="content-form_dropdown-list_item">Нестационарный торговый объект</li>
-                                                                                                        <li class="content-form_dropdown-list_item">Объект оказания сервисных услуг</li>
-                                                                                                        <li class="content-form_dropdown-list_item">Объект общественного питания</li>
-                                                                                                        <li class="content-form_dropdown-list_item">Складской объект</li>
-                                                                                                        <li class="content-form_dropdown-list_item">Производственный объект</li>
-                                                                                                        <li class="content-form_dropdown-list_item">Земельный участок под строительство</li>
-                                                                                                        <li class="content-form_dropdown-list_item">Объект оказания образовательных, спортивных, культурных, социальных, медицинских услуг</li>
-                                                                                                        <li class="content-form_dropdown-list_item">Другое</li>
-                                                            
-                                                                                                                                <!-------------------------------------------------------------------------------->
-                                                                                                                                <!--сделать инпут если выбирается другое что бы пользователь сам смог ввести тип-->
-                                                                                                                                <!-------------------------------------------------------------------------------->
-                                                                                                    </ul>
-                                                                                                                                                    <!--вписывается выбор и отправляется с формой-->
-                                                                                                    <input type="text" name="select" value="" id="input" class="input content-form_dropdown-list_input">
-                                                                                                </div>
-                                                            
-                                                                                        <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
-                                                                                                                                                            <!--ВЫБОР СТОИМОСТИ-->
-                                                                                                <div class="content-form_dropdown-wrapper">
-                                                                                                    <button class="content-form_dropdown-button">Стоимость покупки объекта</button>
-                                                                                                    <ul  class="content-form_dropdown-list">
-                                                                                                        <li class="content-form_dropdown-list_item">По согласованию</li>
-                                                                                                        <li class="content-form_dropdown-list_item">Оптимальная за объект</li>
-                                                                                                    </ul>
-                                                                                                                                <!-------------------------------------------------------------------------------->
-                                                                                                                                <!--сделать инпут если выбирается ОПТИМАЛЬНОЕ что бы пользователь сам смог ввести тип-->
-                                                                                                                                <!-------------------------------------------------------------------------------->
-                                                            
-                                                            
-                                                                                                                                                    <!--вписывается выбор и отправляется с формой-->
-                                                                                                    <input type="text" name="select" value="" id="input" class="input content-form_dropdown-list_input">
-                                                                                                
-                                                                                                </div>
-                                                                                                </div>
-                                                                                        <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
-                                                                                                                                                    <!--ВВОД ЛИЧНЫХ ДАННЫХ-->   
-                                                                                                <div class="content-form--level">
-                                                                                                    <div class="content-form_inpetdata-wrapper"> 
-                                                                                                        <input type="text" name="" value="ФИО" id="input" class="input content-form_inpetname">
-                                                                                                        <input type="phone" name="" value="Телефон" id="input" class="input content-form_phone">
-                                                                                                        <input type="email" name="" value="Email" id="input" class="input content-form_email">
-                                                                                                        <div class="content-form__agreement">
-                                                                                                            <div class="content-form__agreement-checkbox">
-                                                                                                                <label for="formAgreement" class="content-form_checkbtn"><input type="checkbox" checked id="formAgreement" name="agreement" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>Я даю свое согласие на обработку моих персональных данных в соотвествии с <a href="#">Условиями</a>*</label>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <input type="submit" value="отправить" class="content-form--submit">
-                                                                                                    </div>
-                                                                                                   
-                                                            
-                                                                                                </div>
-                                                                                        <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
+                                <form action="#" class="content_form--body" id="purchase">
+
+                            <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
+                                                                   
+                                                <div class="content-form--level">
+                                                                        
+                                                                                        <!--ВЫБОР ТИПА СОБСТВЕННОСТИ-->
+                                                <div class="content-form_dropdown-wrapper">
+                                                    <div class="content-form_dropdown--title ">Тип собственности</div>
+                                                <button class="content-form_dropdown-button ">...</button>
+                                                <ul  class="content-form_dropdown-list">
+                                                    <li class="content-form_dropdown-list_item">Государственная</li>
+                                                    <li class="content-form_dropdown-list_item">Муниципальная</li>
+                                                    <li class="content-form_dropdown-list_item">Частная</li>
+                                                </ul>
+                                                                                        <!--вписывается выбор и отправляется с формой-->
+                                                 <input type="text" name="select" value="" class="content-form_dropdown-list_input _reqtwo">
+                                                                                        <!--------------------------------------------->
+                                            </div>
+                            <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
+                                                                                                    <!--ВЫБОР ТИПА ПОМЕЩЕНИЯ -->
+                                            <div class="content-form_dropdown-wrapper">
+                                                <div class="content-form_dropdown--title">Тип помещения</div>
+                                                    <button class="content-form_dropdown-button ">...</button>
+                                                     <ul  class="content-form_dropdown-list">
+                                                        <li class="content-form_dropdown-list_item">Торговое</li>
+                                                         <li class="content-form_dropdown-list_item">Офисное</li>
+                                                        <li class="content-form_dropdown-list_item">Складское</li>
+                                    
+                                                        <li class="content-form_dropdown-list_item">Производственное</li>
+                                                        <li class="content-form_dropdown-list_item">Земельный участок</li>
+                                                        <li class="content-form_dropdown-list_item">Другое</li>
+                                                    </ul>
+                                                                <!-------------------------------------------------------------------------------->
+                                                                <!--сделать инпут если выбирается другое что бы пользователь сам смог ввести тип-->
+                                                                <!-------------------------------------------------------------------------------->
+
+
+                                                                    <!--вписывается выбор и отправляется с формой-->
+                                                    <input type="text" name="select" value=""  id="input" class="input content-form_dropdown-list_input _reqtwo">
+                                                                                            <!--------------------------------------------->
+                                                </div>
+                                                <!--инпут для ввода данных когда будут выбирать другое-->
+                                    
+                                                <!-- <input type="text"> -->
+                                                <!--НЕЗАБУДЬ!!!!-->
+                                                                   
+                            <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
+                                                                                                <!--РАДИО КНОПКИ ВЫБОРА ЛИЦА-->
+                                <div class="content-form_radiobtn-wrapper ">
+                                        <label><input type="radio" name="category" checked value="item" class="content-form_real-radioBtn"><span class="content-form_custom-radioBtn"></span>Физическое лицо</label>
+                                        <label><input type="radio" name="category" value="item" class="content-form_real-radioBtn"><span class="content-form_custom-radioBtn"></span>Юридическое лицо/ИП</label>
+                                    </div>
+                                                        </div>
+                            <!--------------------------------------------------------------------------------------------------------------------------------------------------------> 
+                                                                                                        <!--ВЫБОР РАЙОНА-->
+                                <div class="content-form--title ">Выберите район</div>
+                                    <div class="content-form--level ">
+                                        <label for="zavodsky-rent" class="content-form_checkbtn"><input type="checkbox" id="zavodsky-rent" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>Заводский</label>
+                                       <label for="kirovsky-rent" class="content-form_checkbtn"><input type="checkbox" id="kirovsky-rent" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>Кировский</label>
+                                       <label for="leninist-rent" class="content-form_checkbtn"><input type="checkbox" id="leninist-rent" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>Ленинский</label>
+                                       <label for="miner-rent" class="content-form_checkbtn"><input type="checkbox" id="miner-rent" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>Рудничный</label>
+                                       <label for="central-rent" class="content-form_checkbtn"><input type="checkbox" id="central-rent" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>Центральный</label>
+                                    </div>
+                            <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
+                                                                                                    <!--ВЫБОР ПЛОЩАДИ ПОМЕЩЕНИЯ-->
+                                <div class="content-form--title">Площадь объекта</div>
+                                    <div class="content-form--level">
+                                        <label for="check1" class="content-form_checkbtn"><input type="checkbox" id="check1" class="content-form_real-checkbox"><span class="content-form_custom-checkbox"></span>5-15 кв.м.</label>
+                                       <label for="check2" class="content-form_checkbtn"><input type="checkbox" id="check2" class="content-form_real-checkbox "><span class="content-form_custom-checkbox"></span>15-30 кв.м.</label>
+                                       <label for="check3" class="content-form_checkbtn"><input type="checkbox" id="check3" class="content-form_real-checkbox "><span class="content-form_custom-checkbox"></span>30-50 кв.м.</label>
+                                       <label for="check4" class="content-form_checkbtn"><input type="checkbox" id="check4" class="content-form_real-checkbox "><span class="content-form_custom-checkbox"></span>50-70 кв.м.</label>
+                                       <label for="check5" class="content-form_checkbtn"><input type="checkbox" id="check5" class="content-form_real-checkbox "><span class="content-form_custom-checkbox"></span>70-100 кв.м.</label>
+                                       <label for="check6" class="content-form_checkbtn"><input type="checkbox" id="check6" class="content-form_real-checkbox "><span class="content-form_custom-checkbox"></span>100-250 кв.м.</label>
+                                       <label for="check7" class="content-form_checkbtn"><input type="checkbox" id="check7" class="content-form_real-checkbox "><span class="content-form_custom-checkbox"></span>свыше 250 кв.м.</label>
+                                    </div>
+                                    
+                            <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
+                                                                                                <!--ВЫБОР НАПРАВЛЕНИЯ БИЗНЕСА-->
+                                <div class="content-form--level">
+                                     <div class="content-form_dropdown-wrapper">
+                                        <div class="content-form_dropdown--title">Направление бизнеса</div>
+                                        <button class="content-form_dropdown-button">...</button>
+                                        <ul  class="content-form_dropdown-list">
+                                            <li class="content-form_dropdown-list_item">Стационарный торговый объект</li>
+                                            <li class="content-form_dropdown-list_item">Нестационарный торговый объект</li>
+                                            <li class="content-form_dropdown-list_item">Объект оказания сервисных услуг</li>
+                                            <li class="content-form_dropdown-list_item">Объект общественного питания</li>
+                                            <li class="content-form_dropdown-list_item">Складской объект</li>
+                                            <li class="content-form_dropdown-list_item">Производственный объект</li>
+                                            <li class="content-form_dropdown-list_item">Земельный участок под строительство</li>
+                                            <li class="content-form_dropdown-list_item">Объект оказания образовательных, спортивных, культурных, социальных, медицинских услуг</li>
+                                            <li class="content-form_dropdown-list_item">Другое</li>
+
+                                                                    <!-------------------------------------------------------------------------------->
+                                                                    <!--сделать инпут если выбирается другое что бы пользователь сам смог ввести тип-->
+                                                                    <!-------------------------------------------------------------------------------->
+                                        </ul>
+                                                                                        <!--вписывается выбор и отправляется с формой-->
+                                        <input type="text" name="select" value="" id="input" class="input content-form_dropdown-list_input _reqtwo">
+                                    </div>
+
+                            <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
+                                                                                                <!--ВЫБОР СТОИМОСТИ-->
+                                    <div class="content-form_dropdown-wrapper">
+                                        <div class="content-form_dropdown--title">Стоимость покупки объекта</div>
+                                        <button class="content-form_dropdown-button">...</button>
+                                        <ul  class="content-form_dropdown-list">
+                                            <li class="content-form_dropdown-list_item">По согласованию</li>
+                                            <li class="content-form_dropdown-list_item">Оптимальная за объект</li>
+                                        </ul>
+                                                                    <!-------------------------------------------------------------------------------->
+                                                                    <!--сделать инпут если выбирается ОПТИМАЛЬНОЕ что бы пользователь сам смог ввести тип-->
+                                                                    <!-------------------------------------------------------------------------------->
+
+
+                                                                                        <!--вписывается выбор и отправляется с формой-->
+                                        <input type="text" name="select" value="" id="input" class="input content-form_dropdown-list_input _reqtwo">
+                                    
+                                    </div>
+                                    </div>
+                            <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
+                                                                                        <!--ВВОД ЛИЧНЫХ ДАННЫХ-->   
+                                    <div class="content-form--level name">
+                                        <div class="content-form_inpetdata-wrapper">
+                                           <div class="content-form_wrapper--input"><span>ФИО:</span><input type="text" name="" value="" id="input" class="input content-form_inpetname _reqtwo"></div>
+                                           <div class="content-form_wrapper--input"><span>Номер телефона:</span><input type="phone" name="" value="" id="input" class="input content-form_phone _reqtwo"></div>
+                                            <div class="content-form_wrapper--input"><span>Email:</span><input type="email" name="" value="" id="input" class="input content-form_email _reqtwo _emailtwo"></div>
+                                            
+                                        </div>
+                                        <div class="content-form__agreement">
+                                            <div class="content-form__agreement-checkbox">
+                                                <label for="formAgreement" class="content-form_checkbtn"><input type="checkbox" checked id="formAgreement" name="agreement" class="content-form_real-checkbox _reqtwo"><span class="content-form_custom-checkbox"></span>Я даю свое согласие на обработку моих персональных данных в соотвествии с <a href="#">Условиями</a>*</label>
+                                            </div>
+                                        </div>
+                                        <input type="submit" value="отправить" class="content-form--submit">
+                                        <div class="content-form--text_two">
+                                            
+                                        </div>
+
+                                    </div>
+                            <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
                                 </form>
                             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
                             
                         </div>
                     </div>
@@ -396,7 +417,8 @@
         
 
     </div>
-    <script src="js/buttons.js"></script>
     <script src="js/main.js"></script>  
+    <!-- <script src="js/formValidateOne.js"></script> 
+    <script src="js/formValidateTwo.js"></script>  -->
 </body>
 </html>

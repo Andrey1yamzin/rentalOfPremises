@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", function(){
     let resetForm = document.querySelectorAll('.content_form--body');
     let wrapSearcInput = document.querySelector('.content-form_wrapper');
     let inputReset = document.querySelectorAll('#input');
-    const formRent = document.getElementById("formrent");
+    // const formRent = document.getElementById("formrent");
+    // const formPurchase = document.getElementById("purchase");
     
     
     
@@ -113,64 +114,162 @@ dropdonWrap.forEach((dropWrapp)=>{
             })
         })  
         
-formRent.addEventListener('submit', formSend);
-        let formReqText = document.querySelector('.content-form--text');
-        async function formSend(e){
-            e.preventDefault();
 
-            let error = formValidate(formRent);
-            if (error === 0){
-                formReqText.textContent = '';
-            }else{
-                // document.querySelector('.content-form_dropdown--title').style.color = 'red';
-                formReqText.textContent = 'Заполните все поля!';
-            }
-        }
 
-        function formValidate(formRent){
-            let error = 0;
-            let formReq = document.querySelectorAll('._req'); 
-            for(let i = 0; i < formReq.length; i++){
-                const input = formReq[i];
-                formRemoveError(input);
-                  
 
-                if(input.classList.contains('_email')){
-                    if(emailTest(input)){
-                        formAddError(input);
-                        error++;
-                    }
-                }else if(input.getAttribute("type") === "checkbox" && input.checked === false){
-                    formAddError(input);
-                    error++;  
-                }else{
-                    if(input.value === ''){
-                        formAddError(input);
-                        error++;
+        const formRent = document.getElementById("formrent");
+        const formPurchase = document.getElementById("purchase");
+
+
+
+        
+        formRent.addEventListener('submit', formSend);
+                let formReqText = document.querySelector('.content-form--text');
+                async function formSend(e){
+                    e.preventDefault();
+        
+                    let error = formValidate(formRent);
+
+
+                    //отправка формы на сервер
+                    // let formDataOne = new FormData(formRent);
+
+
+
+                    if (error === 0){
+                        formReqText.textContent = '';
+                        formRent.classList.add('_tabs--visible');
+                        let responseOne = await fetch('sndmail.php',{
+                            method:'POST',
+                            body:formRent
+                        });
+
+                        if(responseOne.ok){
+                            alert(result.message);
+                            formRent.reset();
+                            formRent.classList.remove('_tabs--visible');
+                        }else{
+                            alert('Ошибка!!!');
+                            formRent.classList.remove('_tabs--visible');
+                        }
+                    }else{
+                        formReqText.textContent = 'Заполните все поля!';
                     }
                 }
-            }
-            console.log(error);
-            return error;
-            
-        }
+        
+                function formValidate(formRent){
+                    let error = 0;
+                    let formReq = document.querySelectorAll('._req'); 
+                    for(let i = 0; i < formReq.length; i++){
+                        const input = formReq[i];
+                        formRemoveError(input);
+                          
+        
+                        if(input.classList.contains('_email')){
+                            if(emailTest(input)){
+                                formAddError(input);
+                                error++;
+                            }
+                        }else if(input.getAttribute("type") === "checkbox" && input.checked === false){
+                            formAddError(input);
+                            error++;  
+                        }else{
+                            if(input.value === ''){
+                                formAddError(input);
+                                error++;
+                            }
+                        }
+                    }
+                    // console.log(error);
+                    return error;
+                    
+                };
+        
+                function formAddError(input){
+                    input.parentElement.classList.add('_error');
+                    input.classList.add('_error');
+                    
+        
+                }
+        
+                function formRemoveError(input){
+                    input.parentElement.classList.remove('_error');
+                    input.classList.remove('_error');
+                    // 
+                }
+                //Функция теста email
+                function emailTest(input){
+                    return !/^\w+([\.-]?\w+)*@\w+([\.-]\w+)*(\.\w{2,8})+$/.test(input.value);
+                };
 
-        function formAddError(input){
-            input.parentElement.classList.add('_error');
-            input.classList.add('_error');
-            // 
 
-        }
 
-        function formRemoveError(input){
-            input.parentElement.classList.remove('_error');
-            input.classList.remove('_error');
-            // 
-        }
-        //Функция теста email
-        function emailTest(input){
-            return !/^\w+([\.-]?\w+)*@\w+([\.-]\w+)*(\.\w{2,8})+$/.test(input.value);
-        }
+
+
+
+
+
+
+
+
+
+
+        formPurchase.addEventListener('submit', formSendtwo);
+                let formReqTexttwo = document.querySelector('.content-form--text_two');
+                async function formSendtwo(e){
+                    e.preventDefault();
+        
+                    let errortwo = formValidatetwo(formPurchase);
+                    if (errortwo === 0){
+                        formReqTexttwo.textContent = '';
+                    }else{
+                        formReqTexttwo.textContent = 'Заполните все поля!';
+                    }
+                }
+        
+                function formValidatetwo(formPurchase){
+                    let errortwo = 0;
+                    let formReq = document.querySelectorAll('._reqtwo'); 
+                    for(let i = 0; i < formReq.length; i++){
+                        const inputtwo = formReq[i];
+                        formRemoveError(inputtwo );
+                          
+        
+                        if(inputtwo.classList.contains('_emailtwo')){
+                            if(emailTest(inputtwo )){
+                                formAddError(inputtwo);
+                                errortwo++;
+                            }
+                        }else if(inputtwo.getAttribute("type") === "checkbox" && inputtwo.checked === false){
+                            formAddError(inputtwo );
+                            errortwo++;  
+                        }else{
+                            if(inputtwo.value === ''){
+                                formAddError(inputtwo );
+                                errortwo++;
+                            }
+                        }
+                    }
+                    // console.log(errortwo);
+                    return errortwo;
+                    
+                }
+        
+                function formAddError(inputtwo){
+                    inputtwo.parentElement.classList.add('_error');
+                    inputtwo.classList.add('_error');
+                    
+        
+                }
+        
+                function formRemoveError(inputtwo){
+                    inputtwo.parentElement.classList.remove('_error');
+                    inputtwo.classList.remove('_error');
+                    // 
+                }
+                //Функция теста email
+                function emailTest(inputtwo){
+                    return !/^\w+([\.-]?\w+)*@\w+([\.-]\w+)*(\.\w{2,8})+$/.test(inputtwo.value);
+                };
+
 });
-
-
