@@ -17,7 +17,7 @@ $mail->setFrom('admin@csbkem.ru', 'СайтАренды');
 $mail->addAddress('admin@csbkem.ru');
 
 //тема письма
-$mail->Subject = 'Заявка на аренду';
+$mail->Subject = 'Заявка на покупку';
 
 
 //Юридический статус
@@ -133,3 +133,5 @@ header('Content-type: application/json');
 echo json_encode($response);
 
 ?>
+
+//доделать этот отправщик и подумать что можно сделать чтобы отправлялось несколько параметров 

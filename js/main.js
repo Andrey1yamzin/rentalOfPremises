@@ -132,20 +132,19 @@ dropdonWrap.forEach((dropWrapp)=>{
 
 
                     //отправка формы на сервер
-                    // let formDataOne = new FormData(formRent);
-
-
+                    let formDataOne = new FormData(formRent);
 
                     if (error === 0){
                         formReqText.textContent = '';
                         formRent.classList.add('_tabs--visible');
                         let responseOne = await fetch('sndmail.php',{
                             method:'POST',
-                            body:formRent
+                            body:formDataOne
                         });
 
                         if(responseOne.ok){
-                            alert(result.message);
+                            let resultRent = await responseOne.json();
+                            alert(resultRent.message);
                             formRent.reset();
                             formRent.classList.remove('_tabs--visible');
                         }else{
@@ -220,8 +219,23 @@ dropdonWrap.forEach((dropWrapp)=>{
                     e.preventDefault();
         
                     let errortwo = formValidatetwo(formPurchase);
+
+                    let formDataTwo = new FormData(formPurchase);
                     if (errortwo === 0){
                         formReqTexttwo.textContent = '';
+                        let responseTwo = await fetch('sndmailTwo.php',{
+                            method:'POST',
+                            body:formDataTwo
+                        });
+                        if(responseOne.ok){
+                            let resultPurchase = await responseOne.json();
+                            alert(resultPurchase.message);
+                            formPurchase.reset();
+                            formPurchase.classList.remove('_tabs--visible');
+                        }else{
+                                alert('Ошибка!!!');
+                                formPurchase.classList.remove('_tabs--visible');
+                            }
                     }else{
                         formReqTexttwo.textContent = 'Заполните все поля!';
                     }
