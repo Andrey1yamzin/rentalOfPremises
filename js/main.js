@@ -8,8 +8,16 @@ document.addEventListener("DOMContentLoaded", function(){
     let resetForm = document.querySelectorAll('.content_form--body');
     let wrapSearcInput = document.querySelector('.content-form_wrapper');
     let inputReset = document.querySelectorAll('#input');
-    // const formRent = document.getElementById("formrent");
-    // const formPurchase = document.getElementById("purchase");
+
+
+    let infoTable = document.querySelector('.inform-table');
+    let infoText = document.querySelector('.inform-table--title');
+    let infoBtn = document.querySelector('.inform-btn');
+    
+
+    let infoTablePur = document.querySelector('.inform-table--Two');
+    let infoTextPur = document.querySelector('.inform-table--title_Two');
+    let infoBtnTwo = document.querySelector('.inform-btnTwo');
     
     
     
@@ -19,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function(){
         if(target && target.classList.contains('input')){
             for(let i = 0; i < inputReset.length; i++){
                 if(target == inputReset[i]){
-                    inputReset[i].value = '';
+                    inputReset[i].contentEditable = "true";
                     break; 
                 }
             }
@@ -74,24 +82,40 @@ document.addEventListener("DOMContentLoaded", function(){
     
     
     //дропдауны
+    
 dropdonWrap.forEach((dropWrapp)=>{
             let dropdown = dropWrapp.querySelector('.content-form_dropdown-button');
             let list = dropWrapp.querySelector('.content-form_dropdown-list');
             let itemList = list.querySelectorAll('.content-form_dropdown-list_item');
             let inputList = dropWrapp.querySelector('.content-form_dropdown-list_input');
+            let closeInput = dropWrapp.querySelector('.content-form_dropdown--close_block');
             dropdown.addEventListener('click', (e)=>{
                 e.preventDefault();
-                list.classList.toggle('content-form_dropdown-list--visible');
+                list.classList.add('content-form_dropdown-list--visible');
+            })
+            dropWrapp.addEventListener('click', (e)=>{              
+                    if(e.target.classList.contains("content-form_dropdown--close_block") || e.target.classList.contains("content-form_dropdown--close_item")){
+                        closeInput.classList.add('_hide-block');
+                        closeInput.classList.remove('_visible-block');
+                        dropdown.classList.remove('content-form_dropdown-button--hide');
+                        inputList.classList.remove('content-form_dropdown-list_input--visible');
+                    }
             })
             itemList.forEach((item)=>{
                 item.addEventListener('click', function(){
                     if(this.innerText == 'Другое'  ){
-                        dropdown.classList.toggle('content-form_dropdown-button--hide');
-                        inputList.classList.toggle('content-form_dropdown-list_input--visible');
+
+                        dropdown.classList.add('content-form_dropdown-button--hide');
+                        inputList.classList.add('content-form_dropdown-list_input--visible');
+                        closeInput.classList.remove('_hide-block');
+                        closeInput.classList.add('_visible-block');
                         inputList.value = 'Введите свой вариант';
+
                     }else if(this.innerText == 'Оптимальная за кв.м.' || this.innerText == 'Оптимальная за объект'){
-                        dropdown.classList.toggle('content-form_dropdown-button--hide');
-                        inputList.classList.toggle('content-form_dropdown-list_input--visible');
+                        dropdown.classList.add('content-form_dropdown-button--hide');
+                        inputList.classList.add('content-form_dropdown-list_input--visible');
+                        closeInput.classList.remove('_hide-block');
+                        closeInput.classList.add('_visible-block');
                         inputList.value = 'Введите оптимальную цену';
                     }else{
                         dropdown.innerText = this.innerText;
@@ -99,9 +123,12 @@ dropdonWrap.forEach((dropWrapp)=>{
                         list.classList.remove('content-form_dropdown-list--visible');
                     }
                     
-                    console.log('Другое')
+                    // console.log('Другое')
                 })
             })
+
+
+
             document.addEventListener('click', (e)=>{
                 if(e.target !== dropdown){
                     list.classList.remove('content-form_dropdown-list--visible');
@@ -116,9 +143,9 @@ dropdonWrap.forEach((dropWrapp)=>{
         
 
 
-
-        const formRent = document.getElementById("formrent");
-        const formPurchase = document.getElementById("purchase");
+//скрипт на таб по аренде
+ const formRent = document.getElementById("formrent");
+        
 
 
 
@@ -137,6 +164,9 @@ dropdonWrap.forEach((dropWrapp)=>{
                     if (error === 0){
                         formReqText.textContent = '';
                         formRent.classList.add('_tabs--visible');
+                        infoTable.classList.add('_table--visible');
+
+
                         let responseOne = await fetch('sndmail.php',{
                             method:'POST',
                             body:formDataOne
@@ -144,12 +174,16 @@ dropdonWrap.forEach((dropWrapp)=>{
 
                         if(responseOne.ok){
                             let resultRent = await responseOne.json();
-                            alert(resultRent.message);
+                            infoText.textContent = resultRent.message;
                             formRent.reset();
-                            formRent.classList.remove('_tabs--visible');
+                            infoBtn.addEventListener('click', function(){
+                                pageReload();
+                            });
+                            
                         }else{
-                            alert('Ошибка!!!');
-                            formRent.classList.remove('_tabs--visible');
+                            errorReload();
+                            alert('ошибка!');
+                            
                         }
                     }else{
                         formReqText.textContent = 'Заполните все поля!';
@@ -201,19 +235,29 @@ dropdonWrap.forEach((dropWrapp)=>{
                     return !/^\w+([\.-]?\w+)*@\w+([\.-]\w+)*(\.\w{2,8})+$/.test(input.value);
                 };
 
+                function errorReload(){
+                    infoTable.classList.remove('_table--visible');
+                    formRent.classList.remove('_tabs--visible');
+                }
+                function pageReload(){
+                    formRent.classList.remove('_tabs--visible');
+                    infoTable.classList.remove('_table--visible');
+                    window.location.reload();
+                }
+
+                
+
+
+
+//скрипт на таб по продаже
+
+
+const formPurchase = document.getElementById("purchase");
 
 
 
 
-
-
-
-
-
-
-
-
-        formPurchase.addEventListener('submit', formSendtwo);
+    formPurchase.addEventListener('submit', formSendtwo);
                 let formReqTexttwo = document.querySelector('.content-form--text_two');
                 async function formSendtwo(e){
                     e.preventDefault();
@@ -223,18 +267,22 @@ dropdonWrap.forEach((dropWrapp)=>{
                     let formDataTwo = new FormData(formPurchase);
                     if (errortwo === 0){
                         formReqTexttwo.textContent = '';
+                        formPurchase.classList.add('_tabs--visible');
+                        infoTablePur.classList.add('_table--visible');
                         let responseTwo = await fetch('sndmailTwo.php',{
                             method:'POST',
                             body:formDataTwo
                         });
-                        if(responseOne.ok){
-                            let resultPurchase = await responseOne.json();
-                            alert(resultPurchase.message);
+                        if(responseTwo.ok){
+                            let resultPurchase = await responseTwo.json();
+                            infoTextPur.textContent = resultPurchase.message;
                             formPurchase.reset();
-                            formPurchase.classList.remove('_tabs--visible');
+                            infoBtnTwo.addEventListener('click', function(){
+                                pageReloadPurchase();
+                            });
                         }else{
-                                alert('Ошибка!!!');
-                                formPurchase.classList.remove('_tabs--visible');
+                            errorReloadPurchase();
+                            alert('ошибка!');
                             }
                     }else{
                         formReqTexttwo.textContent = 'Заполните все поля!';
@@ -285,5 +333,18 @@ dropdonWrap.forEach((dropWrapp)=>{
                 function emailTest(inputtwo){
                     return !/^\w+([\.-]?\w+)*@\w+([\.-]\w+)*(\.\w{2,8})+$/.test(inputtwo.value);
                 };
+
+
+
+
+                function errorReloadPurchase(){
+                    infoTablePur.classList.remove('_table--visible');
+                    formRent.classList.remove('_tabs--visible');
+                }
+                function pageReloadPurchase(){
+                    formRent.classList.remove('_tabs--visible');
+                    infoTablePur.classList.remove('_table--visible');
+                    window.location.reload();
+                }
 
 });

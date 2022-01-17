@@ -29,46 +29,59 @@ if($_POST['status'] == "legal"){
 
 
 //Районы
-$district = "Не имеет значения";
-if($_POST['district'] == "zavodsky"){
-    $district = "Заводский район";
+$zavodsky = "";
+$kirovsky = "";
+$leninist = "";
+$miner = "";
+$central = "";
+
+if($_POST['zavodsky'] == "zavodsky"){
+    $zavodsky = "Заводский район";
 }
-if($_POST['district'] == "kirovsky"){
-    $district = "Кировский район";
+if($_POST['kirovsky'] == "kirovsky"){
+    $kirovsky = "Кировский район";
 }
-if($_POST['district'] == "leninist"){
-    $district = "Ленинский район";
+if($_POST['leninist'] == "leninist"){
+    $leninist = "Ленинский район";
 }
-if($_POST['district'] == "miner"){
-    $district = "Рудничный район";
+if($_POST['miner'] == "miner"){
+    $miner = "Рудничный район";
 }
-if($_POST['district'] == "central"){
-    $district = "Центральный район";
+if($_POST['central'] == "central"){
+    $central = "Центральный район";
 }
 
 
 //Площадь объекта
-$square = "Не имеет значения";
-if($_POST['square'] == "one"){
-    $square = "5-15 кв.м.";
+$squareone = "";
+$squaretwo = "";
+$squarethree = "";
+$squarefour = "";
+$squarefive = "";
+$squaresix = "";
+$squareseven = "";
+
+
+if($_POST['squareone'] == "one"){
+    $squareone = "5-15 кв.м.";
 }
-if($_POST['square'] == "two"){
-    $square = "15-30 кв.м.";
+if($_POST['squaretwo'] == "two"){
+    $squaretwo = "15-30 кв.м.";
 }
-if($_POST['square'] == "three"){
-    $square = "30-50 кв.м.";
+if($_POST['squarethree'] == "three"){
+    $squarethree = "30-50 кв.м.";
 }
-if($_POST['square'] == "four"){
-    $square = "50-70 кв.м.";
+if($_POST['squarefour'] == "four"){
+    $squarefour = "50-70 кв.м.";
 }
-if($_POST['square'] == "five"){
-    $square = "70-100 кв.м.";
+if($_POST['squarefive'] == "five"){
+    $squarefive = "70-100 кв.м.";
 }
-if($_POST['square'] == "six"){
-    $square = "100-250 кв.м.";
+if($_POST['squaresix'] == "six"){
+    $squaresix = "100-250 кв.м.";
 }
-if($_POST['square'] == "seven"){
-    $square = "свыше 250 кв.м.";
+if($_POST['squareseven'] == "seven"){
+    $squareseven = "свыше 250 кв.м.";
 }
 
 
@@ -89,14 +102,19 @@ if(trim(!empty($_POST['RoomType']))){
 if(trim(!empty($_POST['status']))){
     $body.='<p><strong>Юридический статус:</strong> '.$status.'</p>';
 }
+//район
 
-if(trim(!empty($_POST['district']))){
-    $body.='<p><strong>Район:</strong> '.$district.'</p>';
-}
+$body.='<p><strong>Район:</strong> '.$zavodsky.' ' .$kirovsky.' ' .$leninist.' ' .$miner.' ' .$central.'</p>';
 
-if(trim(!empty($_POST['square']))){
-    $body.='<p><strong>Площадь объекта:</strong> '.$square.'</p>';
-}
+
+
+
+// площадь
+
+
+
+$body.='<p><strong>Площадь объекта:</strong> '.$squareone.' ' .$squaretwo. ' ' .$squarethree. ' ' .$squarefour. ' ' .$squarefive. ' ' .$squaresix. ' ' .$squareseven.'</p>';
+
 
 if(trim(!empty($_POST['lineOfBusiness']))){
     $body.='<p><strong>Направление бизнеса:</strong> '.$_POST['lineOfBusiness'].'</p>';
