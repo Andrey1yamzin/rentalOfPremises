@@ -109,14 +109,14 @@ dropdonWrap.forEach((dropWrapp)=>{
                         inputList.classList.add('content-form_dropdown-list_input--visible');
                         closeInput.classList.remove('_hide-block');
                         closeInput.classList.add('_visible-block');
-                        inputList.value = 'Введите свой вариант';
+                        inputList.setAttribute('placeholder', "Введите свой вариант");
 
                     }else if(this.innerText == 'Оптимальная за кв.м.' || this.innerText == 'Оптимальная за объект'){
                         dropdown.classList.add('content-form_dropdown-button--hide');
                         inputList.classList.add('content-form_dropdown-list_input--visible');
                         closeInput.classList.remove('_hide-block');
                         closeInput.classList.add('_visible-block');
-                        inputList.value = 'Введите оптимальную цену';
+                        inputList.setAttribute('placeholder', "Введите оптимальную цену");
                     }else{
                         dropdown.innerText = this.innerText;
                         inputList.value = this.innerText; 

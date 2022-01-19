@@ -141,9 +141,9 @@ if(trim(!empty($_POST['email']))){
 $mail->Body=$body;
 
 if(!$mail->send()){
-    $message = 'ОШИБКА!';
+    $message = 'ОШИБКА';
 }else{
-    $message = 'Запрос отравлен!';
+    $message = 'Запрос отправлен';
 }
 
 $response = ['message' => $message];
