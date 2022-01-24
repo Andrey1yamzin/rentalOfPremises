@@ -156,12 +156,24 @@
                                                 <!--НЕЗАБУДЬ!!!!-->
                                                                    
                             <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
-                                                                                                <!--РАДИО КНОПКИ ВЫБОРА ЛИЦА-->
-                                <div class="content-form_radiobtn-wrapper ">
-                                        <label><input type="radio" name="status" checked value="physical" class="content-form_real-radioBtn"><span class="content-form_custom-radioBtn"></span>Физическое лицо</label>
-                                        <label><input type="radio" name="status" value="legal" class="content-form_real-radioBtn"><span class="content-form_custom-radioBtn"></span>Юридическое лицо/ИП</label>
-                                    </div>
-                                                        </div>
+                                                                                               
+                                <!--ВЫБОР СТАТУСА-->
+    
+                                <div class="content-form_dropdown-wrapper">
+                                    <div class="content-form_dropdown--title">Юридический статус</div>
+                                        <button class="content-form_dropdown-button ">...</button>
+                                         <ul  class="content-form_dropdown-list">
+                                            <li class="content-form_dropdown-list_item">Физическое лицо</li>
+                                             <li class="content-form_dropdown-list_item">Самозанятый</li>
+                                            <li class="content-form_dropdown-list_item">Юридическое лицо</li>
+                        
+                                            <li class="content-form_dropdown-list_item">Индивидуальный предприниматель</li>
+                                        </ul>
+                                                    
+                                                       
+                                        <input type="text" name="statusRent" value=""  id="input" class="input content-form_dropdown-list_input _reqtwo">
+                                                                          <!--------------------------------------------->
+                                    </div> </div>
                             <!--------------------------------------------------------------------------------------------------------------------------------------------------------> 
                                                                                                         <!--ВЫБОР РАЙОНА-->
                                 <div class="content-form--title ">Выберите район</div>
@@ -217,7 +229,7 @@
                             <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
                                                                                                 <!--ВЫБОР СТОИМОСТИ-->
                                     <div class="content-form_dropdown-wrapper">
-                                        <div class="content-form_dropdown--title">Стоимость аренды объекта</div>
+                                        <div class="content-form_dropdown--title">Стоимость аренды объекта в месяц</div>
                                         <button class="content-form_dropdown-button">...</button>
                                         <ul  class="content-form_dropdown-list">
                                             <li class="content-form_dropdown-list_item">По согласованию</li>
@@ -320,12 +332,23 @@
                                                 <!--НЕЗАБУДЬ!!!!-->
                                                                    
                             <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
-                                                                                                <!--РАДИО КНОПКИ ВЫБОРА ЛИЦА-->
-                                <div class="content-form_radiobtn-wrapper ">
-                                        <label><input type="radio" name="statusPurchase" checked value="physical" class="content-form_real-radioBtn"><span class="content-form_custom-radioBtn"></span>Физическое лицо</label>
-                                        <label><input type="radio" name="statusPurchase" value="legal" class="content-form_real-radioBtn"><span class="content-form_custom-radioBtn"></span>Юридическое лицо/ИП</label>
-                                    </div>
-                                                        </div>
+                                                                                                <!--ВЫБОР СТАТУСА-->
+    
+                                                         <div class="content-form_dropdown-wrapper">
+                                                            <div class="content-form_dropdown--title">Юридический статус</div>
+                                                                <button class="content-form_dropdown-button ">...</button>
+                                                                 <ul  class="content-form_dropdown-list">
+                                                                    <li class="content-form_dropdown-list_item">Физическое лицо</li>
+                                                                     <li class="content-form_dropdown-list_item">Самозанятый</li>
+                                                                    <li class="content-form_dropdown-list_item">Юридическое лицо</li>
+                                                
+                                                                    <li class="content-form_dropdown-list_item">Индивидуальный предприниматель</li>
+                                                                </ul>
+                                                                            
+                                                                               
+                                                                <input type="text" name="statusPurchase" value=""  id="input" class="input content-form_dropdown-list_input _reqtwo">
+                                                                                                 <!--------------------------------------------->
+                                                            </div> </div>
                             <!--------------------------------------------------------------------------------------------------------------------------------------------------------> 
                                                                                                         <!--ВЫБОР РАЙОНА-->
                                 <div class="content-form--title ">Выберите район</div>

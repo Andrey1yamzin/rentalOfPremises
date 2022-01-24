@@ -20,13 +20,6 @@ $mail->addAddress('admin@csbkem.ru');
 $mail->Subject = 'Заявка на покупку';
 
 
-//Юридический статус
-$statusPurchase = "Физическое лицо";
-if($_POST['statusPurchase'] == "legal"){
-    $statusPurchase = "Юридическое лицо/ИП";
-}
-
-
 
 //Районы
 $zavodskyPurchase = "";
@@ -100,7 +93,7 @@ if(trim(!empty($_POST['RoomTypePurchase']))){
 }
 
 if(trim(!empty($_POST['statusPurchase']))){
-    $body.='<p><strong>Юридический статус:</strong> '.$statusPurchase.'</p>';
+    $body.='<p><strong>Юридический статус:</strong> '.$_POST['statusPurchase'].'</p>';
 }
 //район
 

@@ -1,9 +1,26 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Excepction;
+use PHPMailer\PHPMailer\SMTP;
 
 require 'phpmailer/src/Exception.php';
 require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/SMTP.php';
+
+//Enable verbose debug output
+$mail->isSMTP();                                            //Send using SMTP
+$mail->Host       = 'ssl://smtp.mail.ru';                     //Set the SMTP server to send through
+$mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+$mail->Username   = 'searcestate@mail.ru';                     //SMTP username
+$mail->Password   = 'csbkem!11';                               //SMTP password
+$mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
+$mail->Port       = 465;
+
+//От кого письмо
+$mail->setFrom('searcestate@mail.ru');
+//Кому письмо
+$mail->addAddress('admin@csbkem.ru');
+
 
 $mail = new PHPMailer(true);
 $mail->CharSet = 'UTF-8';
@@ -11,20 +28,11 @@ $mail->setLanguage('ru', 'phpmailer/language/');
 $mail->IsHTML(true);
 
 
-//От кого письмо
-$mail->setFrom('admin@csbkem.ru', 'СайтАренды');
-//Кому письмо
-$mail->addAddress('admin@csbkem.ru');
+
 
 //тема письма
 $mail->Subject = 'Заявка на аренду';
 
-
-//Юридический статус
-$status = "Физическое лицо";
-if($_POST['status'] == "legal"){
-    $status = "Юридическое лицо/ИП";
-}
 
 
 
@@ -99,8 +107,8 @@ if(trim(!empty($_POST['RoomType']))){
     $body.='<p><strong>Тип помещения:</strong> '.$_POST['RoomType'].'</p>';
 }
 
-if(trim(!empty($_POST['status']))){
-    $body.='<p><strong>Юридический статус:</strong> '.$status.'</p>';
+if(trim(!empty($_POST['statusRent']))){
+    $body.='<p><strong>Юридический статус:</strong> '.$_POST['statusRent'].'</p>';
 }
 //район
 

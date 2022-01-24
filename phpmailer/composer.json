@@ -29,7 +29,8 @@
         "php": ">=5.5.0",
         "ext-ctype": "*",
         "ext-filter": "*",
-        "ext-hash": "*"
+        "ext-hash": "*",
+        "phpmailer/phpmailer": "^6.5"
     },
     "require-dev": {
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
@@ -40,6 +41,8 @@
         "roave/security-advisories": "dev-latest",
         "squizlabs/php_codesniffer": "^3.6.0",
         "yoast/phpunit-polyfills": "^1.0.0"
+        
+
     },
     "suggest": {
         "ext-mbstring": "Needed to send email in multibyte encoding charset or decode encoded addresses",
