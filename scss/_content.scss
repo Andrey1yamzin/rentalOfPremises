@@ -435,7 +435,7 @@ img{
         color:#fff;
         visibility: hidden;
         transition: all 0.5s ease 0s;
-        .inform-table--title{
+        .inform-table--title_Two{
             background: rgba(34, 34, 34, 0.849);
             border-radius: 10px;
             color: #fff;
@@ -464,10 +464,10 @@ img{
     padding-top: 20px;
     padding-left:10px ;
     :first-child{
-        transform: rotate(40deg) translateX(4px);
+        transform: rotate(46deg) translateX(3px);
     }
     :last-child{
-        transform: rotate(-40deg) translateX(3px);
+        transform: rotate(-50deg) translateX(3px);
     }
 }
 .content-form_dropdown--close_item{

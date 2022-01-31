@@ -1,12 +1,16 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Excepction;
-use PHPMailer\PHPMailer\SMTP;
+// use PHPMailer\PHPMailer\PHPMailer;
+// use PHPMailer\PHPMailer\Excepction;
+// use PHPMailer\PHPMailer\SMTP;
 
-require 'phpmailer/src/Exception.php';
-require 'phpmailer/src/PHPMailer.php';
-require 'phpmailer/src/SMTP.php';
+// require 'phpmailer/src/Exception.php';
+// require 'phpmailer/src/PHPMailer.php';
+// require 'phpmailer/src/SMTP.php';
 
+
+require_once('phpmailer/PHPMailerAutoload.php');
+$mail = new PHPMailer;
+$mail->CharSet = 'UTF-8';
 //Enable verbose debug output
 $mail->isSMTP();                                            //Send using SMTP
 $mail->Host       = 'ssl://smtp.mail.ru';                     //Set the SMTP server to send through
@@ -22,8 +26,6 @@ $mail->setFrom('searcestate@mail.ru');
 $mail->addAddress('admin@csbkem.ru');
 
 
-$mail = new PHPMailer(true);
-$mail->CharSet = 'UTF-8';
 $mail->setLanguage('ru', 'phpmailer/language/');
 $mail->IsHTML(true);
 

@@ -1,20 +1,26 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Excepction;
-
-require 'phpmailer/src/Exception.php';
-require 'phpmailer/src/PHPMailer.php';
-
-$mail = new PHPMailer(true);
+require_once('phpmailer/PHPMailerAutoload.php');
+$mail = new PHPMailer;
 $mail->CharSet = 'UTF-8';
+
+$mail->isSMTP();                                            //Send using SMTP
+$mail->Host       = 'ssl://smtp.mail.ru';                     //Set the SMTP server to send through
+$mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+$mail->Username   = 'searcestate@mail.ru';                     //SMTP username
+$mail->Password   = 'FLPdsitxauaFeqkvPAtu';                               //SMTP password
+$mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
+$mail->Port       = 465;
+
+//От кого письмо
+$mail->setFrom('searcestate@mail.ru', 'Сайт по недвижимости');
+//Кому письмо
+$mail->addAddress('admin@csbkem.ru');
+
+
 $mail->setLanguage('ru', 'phpmailer/language/');
 $mail->IsHTML(true);
 
 
-//От кого письмо
-$mail->setFrom('admin@csbkem.ru', 'СайтАренды');
-//Кому письмо
-$mail->addAddress('admin@csbkem.ru');
 
 //тема письма
 $mail->Subject = 'Заявка на покупку';
