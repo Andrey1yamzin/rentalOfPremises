@@ -1,5 +1,18 @@
 "use strict"
 document.addEventListener("DOMContentLoaded", function(){
+
+    let messContent = document.querySelector('.message');
+    function sayHi() {
+        messContent.style.display = 'flex';
+        let closeMess = document.querySelector('.message--btn');
+        closeMess.addEventListener('click', function(){
+            messContent.style.display = 'none'; 
+        })
+      };
+      setTimeout(sayHi, 1000);
+
+
+
     let wrapBtn = document.querySelector('.conten-form_buttons');
     let btn = document.querySelectorAll('.btn');
     let tabs = document.querySelectorAll('.content-form__tabs');
