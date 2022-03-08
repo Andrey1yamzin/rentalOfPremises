@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function(){
     let btn = document.querySelectorAll('.btn');
     let tabs = document.querySelectorAll('.content-form__tabs');
     let dropdonWrap = document.querySelectorAll('.content-form_dropdown-wrapper');
-    // let formReset = document.querySelector('content_form--body');
+
     let resetForm = document.querySelectorAll('.content_form--body');
     let wrapSearcInput = document.querySelector('.content-form_wrapper');
     let inputReset = document.querySelectorAll('#input');
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function(){
     })
     
     
-    //табы
+    
         function hideTabContent(hide){
             for(let i = hide; i < tabs.length; i++){
                 tabs[i].classList.remove('content-form__tabs--visible');
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function(){
             })
     
     
-    //дропдауны
+
     
 dropdonWrap.forEach((dropWrapp)=>{
             let dropdown = dropWrapp.querySelector('.content-form_dropdown-button');
@@ -136,7 +136,7 @@ dropdonWrap.forEach((dropWrapp)=>{
                         list.classList.remove('content-form_dropdown-list--visible');
                     }
                     
-                    // console.log('Другое')
+
                 })
             })
 
@@ -156,7 +156,6 @@ dropdonWrap.forEach((dropWrapp)=>{
         
 
 
-//скрипт на таб по аренде
  const formRent = document.getElementById("formrent");
         
 
@@ -171,7 +170,7 @@ dropdonWrap.forEach((dropWrapp)=>{
                     let error = formValidate(formRent);
 
 
-                    //отправка формы на сервер
+
                     let formDataOne = new FormData(formRent);
 
                     if (error === 0){
@@ -226,7 +225,6 @@ dropdonWrap.forEach((dropWrapp)=>{
                             }
                         }
                     }
-                    // console.log(error);
                     return error;
                     
                 };
@@ -241,9 +239,9 @@ dropdonWrap.forEach((dropWrapp)=>{
                 function formRemoveError(input){
                     input.parentElement.classList.remove('_error');
                     input.classList.remove('_error');
-                    // 
+                    
                 }
-                //Функция теста email
+
                 function emailTest(input){
                     return !/^\w+([\.-]?\w+)*@\w+([\.-]\w+)*(\.\w{2,8})+$/.test(input.value);
                 };
@@ -261,13 +259,7 @@ dropdonWrap.forEach((dropWrapp)=>{
                 
 
 
-
-//скрипт на таб по продаже
-
-
 const formPurchase = document.getElementById("purchase");
-
-
 
 
     formPurchase.addEventListener('submit', formSendtwo);
@@ -325,7 +317,6 @@ const formPurchase = document.getElementById("purchase");
                             }
                         }
                     }
-                    // console.log(errortwo);
                     return errortwo;
                     
                 }
@@ -340,9 +331,8 @@ const formPurchase = document.getElementById("purchase");
                 function formRemoveError(inputtwo){
                     inputtwo.parentElement.classList.remove('_error');
                     inputtwo.classList.remove('_error');
-                    // 
+                    
                 }
-                //Функция теста email
                 function emailTest(inputtwo){
                     return !/^\w+([\.-]?\w+)*@\w+([\.-]\w+)*(\.\w{2,8})+$/.test(inputtwo.value);
                 };
