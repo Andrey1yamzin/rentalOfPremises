@@ -1,29 +1,30 @@
 <?php
-// use PHPMailer\PHPMailer\PHPMailer;
-// use PHPMailer\PHPMailer\Excepction;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Excepction;
 // use PHPMailer\PHPMailer\SMTP;
 
-// require 'phpmailer/src/Exception.php';
-// require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
 // require 'phpmailer/src/SMTP.php';
 
 
-require_once('phpmailer/PHPMailerAutoload.php');
+// require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
 $mail->CharSet = 'UTF-8';
 //Enable verbose debug output
-$mail->isSMTP();                                            //Send using SMTP
-$mail->Host       = 'ssl://smtp.mail.ru';                     //Set the SMTP server to send through
-$mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-$mail->Username   = 'searcestate@mail.ru';                     //SMTP username
-$mail->Password   = 'csbkem!11';                               //SMTP password
+// $mail->isSMTP();                                            //Send using SMTP
+// $mail->Host       = 'ssl://smtp.mail.ru';                     //Set the SMTP server to send through
+$mail->SMTPAuth   = true;
+                                  //Enable SMTP authentication
+// $mail->Username   = 'searcestate@mail.ru';                     //SMTP username
+// $mail->Password   = 'csbkem!11';                               //SMTP password
 $mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
-$mail->Port       = 465;
+// $mail->Port       = 465;
 
 //От кого письмо
 $mail->setFrom('searcestate@mail.ru');
 //Кому письмо
-$mail->addAddress('admin@csbkem.ru');
+$mail->addAddress('p.search@csbkem.ru');
 
 
 $mail->setLanguage('ru', 'phpmailer/language/');
@@ -128,11 +129,6 @@ $body.='<p><strong>Площадь объекта:</strong> '.$squareone.' ' .$sq
 
 if(trim(!empty($_POST['lineOfBusiness']))){
     $body.='<p><strong>Направление бизнеса:</strong> '.$_POST['lineOfBusiness'].'</p>';
-}
-
-
-if(trim(!empty($_POST['rentingAnObject']))){
-    $body.='<p><strong>Стоимость аренды объекта:</strong> '.$_POST['rentingAnObject'].'</p>';
 }
 
 

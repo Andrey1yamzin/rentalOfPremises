@@ -1,15 +1,15 @@
 "use strict"
 document.addEventListener("DOMContentLoaded", function(){
 
-    let messContent = document.querySelector('.message');
-    function sayHi() {
-        messContent.style.display = 'flex';
-        let closeMess = document.querySelector('.message--btn');
-        closeMess.addEventListener('click', function(){
-            messContent.style.display = 'none'; 
-        })
-      };
-      setTimeout(sayHi, 1000);
+    // let messContent = document.querySelector('.message');
+    // function sayHi() {
+    //     messContent.style.display = 'flex';
+    //     let closeMess = document.querySelector('.message--btn');
+    //     closeMess.addEventListener('click', function(){
+    //         messContent.style.display = 'none'; 
+    //     })
+    //   };
+    //   setTimeout(sayHi, 1000);
 
 
 

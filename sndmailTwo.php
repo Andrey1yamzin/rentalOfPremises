@@ -1,24 +1,35 @@
 <?php
-require_once('phpmailer/PHPMailerAutoload.php');
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Excepction;
+// use PHPMailer\PHPMailer\SMTP;
+
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
+// require 'phpmailer/src/SMTP.php';
+
+
+// require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
 $mail->CharSet = 'UTF-8';
-
-$mail->isSMTP();                                            //Send using SMTP
-$mail->Host       = 'ssl://smtp.mail.ru';                     //Set the SMTP server to send through
-$mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-$mail->Username   = 'searcestate@mail.ru';                     //SMTP username
-$mail->Password   = 'FLPdsitxauaFeqkvPAtu';                               //SMTP password
+//Enable verbose debug output
+// $mail->isSMTP();                                            //Send using SMTP
+// $mail->Host       = 'ssl://smtp.mail.ru';                     //Set the SMTP server to send through
+$mail->SMTPAuth   = true;
+                                  //Enable SMTP authentication
+// $mail->Username   = 'searcestate@mail.ru';                     //SMTP username
+// $mail->Password   = 'csbkem!11';                               //SMTP password
 $mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
-$mail->Port       = 465;
+// $mail->Port       = 465;
 
 //От кого письмо
-$mail->setFrom('searcestate@mail.ru', 'Сайт по недвижимости');
+$mail->setFrom('searcestate@mail.ru');
 //Кому письмо
-$mail->addAddress('admin@csbkem.ru');
+$mail->addAddress('p.search@csbkem.ru');
 
 
 $mail->setLanguage('ru', 'phpmailer/language/');
 $mail->IsHTML(true);
+
 
 
 
@@ -117,11 +128,6 @@ $body.='<p><strong>Площадь объекта:</strong> '.$squareonePurchase.
 
 if(trim(!empty($_POST['lineOfBusinessPurchase']))){
     $body.='<p><strong>Направление бизнеса:</strong> '.$_POST['lineOfBusinessPurchase'].'</p>';
-}
-
-
-if(trim(!empty($_POST['PurchaingAnObject']))){
-    $body.='<p><strong>Стоимость покупки объекта:</strong> '.$_POST['PurchaingAnObject'].'</p>';
 }
 
 
