@@ -203,8 +203,14 @@ dropdonWrap.forEach((dropWrapp)=>{
                 }
         
                 function formValidate(formRent){
+                   
                     let error = 0;
+                    error = checkbx();//присваивается если чекбокс возвратил 3 или 0
+
+
+
                     let formReq = document.querySelectorAll('._req'); 
+                  
                     for(let i = 0; i < formReq.length; i++){
                         const input = formReq[i];
                         formRemoveError(input);
@@ -226,14 +232,39 @@ dropdonWrap.forEach((dropWrapp)=>{
                         }
                     }
                     return error;
-                    
                 };
-        
+                
+
+                function checkbx(){
+                    let error = 0;
+                      let formCheck = document.querySelectorAll('._check');
+
+                    function validation(){
+                        formCheck.forEach(function(el){
+                            formAddError(el);
+                            error++;
+          })};//берутся чекбоксы и если с  checkboxValidation возвратил false то загарается красным
+
+
+                function checkboxValidation(element){
+                            return element.checked === true;
+                    }
+                let prop =[...formCheck];
+                let validateArray = prop.some(checkboxValidation);
+
+                if(validateArray === false){
+                    validation();
+                }
+
+                return error;
+            }
+
+
+
+
                 function formAddError(input){
                     input.parentElement.classList.add('_error');
                     input.classList.add('_error');
-                    
-        
                 }
         
                 function formRemoveError(input){
