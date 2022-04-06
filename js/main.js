@@ -234,27 +234,115 @@ dropdonWrap.forEach((dropWrapp)=>{
                     return error;
                 };
                 
-
+//проверка в первом табе нажаты ли чекбоксы
                 function checkbx(){
                     let error = 0;
                       let formCheck = document.querySelectorAll('._check');
+                      let checkpremises = document.querySelectorAll('._checpremises');
+                      let checkarea = document.querySelectorAll('._checkarea');
+                      let checksize = document.querySelectorAll('._checksize');
+                                            //добавление красного квадрата 
+                                            function validation(){
+                                                formCheck.forEach(function(el){
+                                                    formAddError(el);
+                                                    console.log(el)
+                                                    error++;
+                                        })}
+                                            //удаление красного квадрата
+                                        function validationpassed(){
+                                            formCheck.forEach(function(el){
+                                                formRemoveError(el);
+                                    })}
+                                    //добавление красного квадрата 
+                                            function validationPomises(){
+                                                checkpremises.forEach(function(el){
+                                                    formAddError(el);
+                                                    error++;
+                                        })}
+                                         //удаление красного квадрата
+                                        function validationPomisesPassed(){
+                                            checkpremises.forEach(function(el){
+                                                formRemoveError(el);
+                                    })}
 
-                    function validation(){
-                        formCheck.forEach(function(el){
-                            formAddError(el);
-                            error++;
-          })};//берутся чекбоксы и если с  checkboxValidation возвратил false то загарается красным
+                                            //добавление красного квадрата 
+                                            function validationArrayArea(){
+                                                        checkarea.forEach(function(el){
+                                                            formAddError(el);
+                                                            error++;
+                                        })}
+                                            //удаление красного квадрата
+                                        function validationArrayAreaPassed(){
+                                            checkarea.forEach(function(el){
+                                                formRemoveError(el);
+                                    })}
+
+                                            //добавление красного квадрата 
+                                            function validationSize(){
+                                                checksize.forEach(function(el){
+                                                    formAddError(el);
+                                                    error++;
+                                        })}
+                                            //удаление красного квадрата
+                                        function validationSizePassed(){
+                                            checksize.forEach(function(el){
+                                                formRemoveError(el);
+                                    })}
+                        
+                        //берутся чекбоксы и если с  checkboxValidation возвратил false то загарается красным
+          
 
 
                 function checkboxValidation(element){
                             return element.checked === true;
                     }
                 let prop =[...formCheck];
+                let propPromises = [...checkpremises];
+                let propArea = [...checkpremises];
+                let propSize = [...checksize]
+//выше мы полученные коллецкции засовываем в массив и ниже проверяем усть там нажатые чебоксы
                 let validateArray = prop.some(checkboxValidation);
+                let validateArrayPromises = propPromises.some(checkboxValidation);
+                let validateArrayArea = propArea.some(checkboxValidation);
+                let validateSize = propSize.some(checkboxValidation);
+                
+                startValidate();
+                function startValidate(){
+                    startValidateArray();
+                    startValidatePromises();
+                    startValidateArrayArea();
+                    startValidateSize();
+                };
+                    function startValidateArray(){
+                        if(validateArray === false){
+                            validation();
+                        }else if(validateArray === true){
+                            validationpassed();
+                        }
+                    };
+                    function startValidatePromises(){
+                        if(validateArrayPromises === false){
+                            validationPomises();
+                        }else if(validateArrayPromises === true){
+                            validationPomisesPassed();
+                        }
+                    };
+                    function startValidateArrayArea(){
+                        if(validateArrayArea === false){
+                            validationArrayArea();
+                        }else if(validateArrayArea === true){
+                            validationArrayAreaPassed();
+                        }
+                    };
+                    function startValidateSize(){
+                        if(validateSize === false){
+                            validationSize();
+                        }else if(validateSize === true){
+                            validationSizePassed();
+                        }
+                    };
 
-                if(validateArray === false){
-                    validation();
-                }
+                 
 
                 return error;
             }
@@ -288,6 +376,13 @@ dropdonWrap.forEach((dropWrapp)=>{
                 }
 
                 
+
+
+
+
+
+
+                                                                                    //таб 2 
 
 
 const formPurchase = document.getElementById("purchase");
@@ -327,23 +422,25 @@ const formPurchase = document.getElementById("purchase");
         
                 function formValidatetwo(formPurchase){
                     let errortwo = 0;
+                    errortwo = checkbxtwo();
+
                     let formReq = document.querySelectorAll('._reqtwo'); 
                     for(let i = 0; i < formReq.length; i++){
                         const inputtwo = formReq[i];
-                        formRemoveError(inputtwo );
+                        formRemoveErrortwo(inputtwo);
                           
         
                         if(inputtwo.classList.contains('_emailtwo')){
                             if(emailTest(inputtwo )){
-                                formAddError(inputtwo);
+                                formAddErrortwo(inputtwo);
                                 errortwo++;
                             }
                         }else if(inputtwo.getAttribute("type") === "checkbox" && inputtwo.checked === false){
-                            formAddError(inputtwo );
+                            formAddErrortwo(inputtwo );
                             errortwo++;  
                         }else{
                             if(inputtwo.value === ''){
-                                formAddError(inputtwo );
+                                formAddErrortwo(inputtwo );
                                 errortwo++;
                             }
                         }
@@ -351,15 +448,136 @@ const formPurchase = document.getElementById("purchase");
                     return errortwo;
                     
                 }
+
+                function checkbxtwo(){
+                    let errortwo = 0;
+                      let formChecktwo = document.querySelectorAll('._checktwo');
+                      let checkpremisestwo = document.querySelectorAll('._checpremisestwo');
+                      let checkareatwo = document.querySelectorAll('._checkareatwo');
+                      let checksizetwo = document.querySelectorAll('._checksizetwo');
+                                            //добавление красного квадрата 
+                                            function validation(){
+                                                formChecktwo.forEach(function(el){
+                                                    formAddErrortwo(el);
+                                                    console.log(el)
+                                                    errortwo++;
+                                        })}
+                                            //удаление красного квадрата
+                                        function validationpassed(){
+                                            formChecktwo.forEach(function(el){
+                                                formRemoveErrortwo(el);
+                                    })}
+                                    //добавление красного квадрата 
+                                            function validationPomises(){
+                                                checkpremisestwo.forEach(function(el){
+                                                    formAddErrortwo(el);
+                                                    errortwo++;
+                                        })}
+                                         //удаление красного квадрата
+                                        function validationPomisesPassed(){
+                                            checkpremisestwo.forEach(function(el){
+                                                formRemoveErrortwo(el);
+                                    })}
+
+                                            //добавление красного квадрата 
+                                            function validationArrayArea(){
+                                                        checkareatwo.forEach(function(el){
+                                                            formAddErrortwo(el);
+                                                            errortwo++;
+                                        })}
+                                            //удаление красного квадрата
+                                        function validationArrayAreaPassed(){
+                                            checkareatwo.forEach(function(el){
+                                                formRemoveErrortwo(el);
+                                    })}
+
+                                            //добавление красного квадрата 
+                                            function validationSize(){
+                                                checksizetwo.forEach(function(el){
+                                                    formAddErrortwo(el);
+                                                    errortwo++;
+                                        })}
+                                            //удаление красного квадрата
+                                        function validationSizePassed(){
+                                            checksizetwo.forEach(function(el){
+                                                formRemoveErrortwo(el);
+                                    })}
+                        
+                        //берутся чекбоксы и если с  checkboxValidation возвратил false то загарается красным
+          
+
+
+                function checkboxValidation(element){
+                            return element.checked === true;
+                    }
+                let proptwo =[...formChecktwo];
+                let propPromisestwo = [...checkpremisestwo];
+                let propAreatwo = [...checkpremisestwo];
+                let propSizetwo = [...checksizetwo]
+//выше мы полученные коллецкции засовываем в массив и ниже проверяем усть там нажатые чебоксы
+                let validateArray = proptwo.some(checkboxValidation);
+                let validateArrayPromises = propPromisestwo.some(checkboxValidation);
+                let validateArrayArea = propAreatwo.some(checkboxValidation);
+                let validateSize = propSizetwo.some(checkboxValidation);
+                
+                startValidate();
+                function startValidate(){
+                    startValidateArray();
+                    startValidatePromises();
+                    startValidateArrayArea();
+                    startValidateSize();
+                };
+                    function startValidateArray(){
+                        if(validateArray === false){
+                            validation();
+                        }else if(validateArray === true){
+                            validationpassed();
+                        }
+                    };
+                    function startValidatePromises(){
+                        if(validateArrayPromises === false){
+                            validationPomises();
+                        }else if(validateArrayPromises === true){
+                            validationPomisesPassed();
+                        }
+                    };
+                    function startValidateArrayArea(){
+                        if(validateArrayArea === false){
+                            validationArrayArea();
+                        }else if(validateArrayArea === true){
+                            validationArrayAreaPassed();
+                        }
+                    };
+                    function startValidateSize(){
+                        if(validateSize === false){
+                            validationSize();
+                        }else if(validateSize === true){
+                            validationSizePassed();
+                        }
+                    };
+                return errortwo;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
         
-                function formAddError(inputtwo){
+                function formAddErrortwo(inputtwo){
                     inputtwo.parentElement.classList.add('_error');
                     inputtwo.classList.add('_error');
                     
         
                 }
         
-                function formRemoveError(inputtwo){
+                function formRemoveErrortwo(inputtwo){
                     inputtwo.parentElement.classList.remove('_error');
                     inputtwo.classList.remove('_error');
                     
