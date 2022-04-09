@@ -38,6 +38,65 @@ $mail->Subject = 'Заявка на покупку';
 
 
 
+
+//Тип собственности
+$statenametwo = "";
+$municipalnametwo = "";
+$privatenametwo = "";
+
+
+if($_POST['statenametwo'] == "statenametwo"){
+    $statenametwo = "Государственная";
+}
+if($_POST['municipalnametwo'] == "municipalnametwo"){
+    $municipalnametwo = "Муниципальная";
+}
+if($_POST['privatenametwo'] == "privatenametwo"){
+    $privatenametwo = "Частная";
+}
+
+
+
+
+
+
+//тип помещения 
+
+$tradenametwo = "";
+$officenametwo = "";
+$warehousenametwo = "";
+$productionnametwo = "";
+$landnametwo = "";
+
+if($_POST['tradenametwo'] == "tradenametwo"){
+    $tradenametwo = "Торговое";
+}
+if($_POST['officenametwo'] == "officenametwo"){
+    $officenametwo = "Офисное";
+}
+if($_POST['warehousenametwo'] == "warehousenametwo"){
+    $warehousenametwo = "Складское";
+}
+if($_POST['productionnametwo'] == "productionnametwo"){
+    $productionnametwo = "Производственное";
+}
+if($_POST['landnametwo'] == "landnametwo"){
+    $landnametwo = "Земельный участок";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Районы
 $zavodskyPurchase = "";
 $kirovskyPurchase = "";
@@ -99,15 +158,13 @@ if($_POST['squaresevenPurchase'] == "seven"){
 
 //Тело письма
 
-$body.='<h1>Запрос на Аренду</h1>';
+$body.='<h1>Запрос на Покупку</h1>';
 
-if(trim(!empty($_POST['propertyTypePurchase']))){
-    $body.='<p><strong>Тип собственности:</strong> '.$_POST['propertyTypePurchase'].'</p>';
-}
+$body.='<p><strong>Тип собственности:</strong> '.$statenametwo.' '.$municipalnametwo.' '.$privatenametwo.'</p>';
+$body.='<p><strong>Тип помещения:</strong> '.$tradenametwo.' ' .$officenametwo. ' ' .$warehousenametwo. ' ' .$productionnamtwo. ' ' .$landnametwo. '</p>';
 
-if(trim(!empty($_POST['RoomTypePurchase']))){
-    $body.='<p><strong>Тип помещения:</strong> '.$_POST['RoomTypePurchase'].'</p>';
-}
+
+
 
 if(trim(!empty($_POST['statusPurchase']))){
     $body.='<p><strong>Юридический статус:</strong> '.$_POST['statusPurchase'].'</p>';

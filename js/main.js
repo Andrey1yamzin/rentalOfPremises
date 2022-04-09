@@ -298,7 +298,7 @@ dropdonWrap.forEach((dropWrapp)=>{
                     }
                 let prop =[...formCheck];
                 let propPromises = [...checkpremises];
-                let propArea = [...checkpremises];
+                let propArea = [...checkarea];
                 let propSize = [...checksize]
 //выше мы полученные коллецкции засовываем в массив и ниже проверяем усть там нажатые чебоксы
                 let validateArray = prop.some(checkboxValidation);
@@ -512,7 +512,7 @@ const formPurchase = document.getElementById("purchase");
                     }
                 let proptwo =[...formChecktwo];
                 let propPromisestwo = [...checkpremisestwo];
-                let propAreatwo = [...checkpremisestwo];
+                let propAreatwo = [...checkareatwo];
                 let propSizetwo = [...checksizetwo]
 //выше мы полученные коллецкции засовываем в массив и ниже проверяем усть там нажатые чебоксы
                 let validateArray = proptwo.some(checkboxValidation);

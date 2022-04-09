@@ -37,6 +37,57 @@ $mail->IsHTML(true);
 $mail->Subject = 'Заявка на аренду';
 
 
+//Тип собственности
+$statenameone = "";
+$municipalnameone = "";
+$privatenameone = "";
+
+
+if($_POST['statenameone'] == "statenameone"){
+    $statenameone = "Государственная";
+}
+if($_POST['municipalnameone'] == "municipalnameone"){
+    $municipalnameone = "Муниципальная";
+}
+if($_POST['privatenameone'] == "privatenameone"){
+    $privatenameone = "Частная";
+}
+
+
+
+
+
+
+//тип помещения 
+
+$tradenameone = "";
+$officenameone = "";
+$warehousenameone = "";
+$productionnameone = "";
+$landnameone = "";
+
+if($_POST['tradenameone'] == "tradenameone"){
+    $tradenameone = "Торговое";
+}
+if($_POST['officenameone'] == "officenameone"){
+    $officenameone = "Офисное";
+}
+if($_POST['warehousenameone'] == "warehousenameone"){
+    $warehousenameone = "Складское";
+}
+if($_POST['productionnameone'] == "productionnameone"){
+    $productionnameone = "Производственное";
+}
+if($_POST['landnameone'] == "landnameone"){
+    $landnameone = "Земельный участок";
+}
+
+
+
+
+
+
+
 
 
 //Районы
@@ -102,13 +153,10 @@ if($_POST['squareseven'] == "seven"){
 
 $body.='<h1>Запрос на Аренду</h1>';
 
-if(trim(!empty($_POST['propertyType']))){
-    $body.='<p><strong>Тип собственности:</strong> '.$_POST['propertyType'].'</p>';
-}
+$body.='<p><strong>Тип собственности:</strong> '.$statenameone.' '.$municipalnameone.' '.$privatenameone.'</p>';
+$body.='<p><strong>Тип помещения:</strong> '.$tradenameone.' ' .$officenameone. ' ' .$warehousenameone. ' ' .$productionnameone. ' ' .$landnameone. '</p>';
 
-if(trim(!empty($_POST['RoomType']))){
-    $body.='<p><strong>Тип помещения:</strong> '.$_POST['RoomType'].'</p>';
-}
+
 
 if(trim(!empty($_POST['statusRent']))){
     $body.='<p><strong>Юридический статус:</strong> '.$_POST['statusRent'].'</p>';
